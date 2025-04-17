@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orderliness</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .form-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .form-container label {
+            width: 50%; /* Each label will take up 50% of the width */
+            box-sizing: border-box;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="header">
+        <div class="row">
+            <div class="col COL1" id="instructions">
+                <p style="text-align: center;"><b>Is there an allocated area for City Facilities:</b></p>
+                <b>Waste Containers?</b><br>
+                <label><input type="radio" name="waste_containers" value="Yes"> <b>Yes</b> (Hidden in a fixed location)</label>
+                <label><input type="radio" name="waste_containers" value="No"> <b>No</b> (No specific location or not hidden)</label>
+                <br><br>
+                <b>Car Parking?</b><br>
+                <label><input type="radio" name="car_parking" value="Yes"> <b>Yes</b> (Well organized)</label>
+                <label><input type="radio" name="car_parking" value="No"> <b>No</b> (Disorganized or inadequate)</label>
+                <br><br>
+                <b>Placement of Other City Facilities?</b><br>
+                <label><input type="radio" name="public_facilities" value="Yes"> <b>Yes</b> (Well-organized and unobstructed)</label>
+                <label><input type="radio" name="public_facilities" value="No"> <b>No</b> (Disorganized and obstructive)</label>
+                <BR><BR>
+            </div>
+            <div class="col COL2">
+                <input type="file" id="upload" accept="image/*">
+                <button id="remove-image">Remove Image</button>
+                <!-- <button class="reset-button" id="reset-all">Reset All</button> -->
+                <div id="selected-count">
+                    <!-- <div id="line1-counts">
+                        Line 1: 
+                        Yellow Line Squares: <span id="yellow-count-line1"></span> 
+                        Red Line Squares: <span id="red-count-line1"></span>
+                    </div>
+                    <div id="line2-counts">
+                        Line 2: 
+                        Yellow Line Squares: <span id="yellow-count-line2"></span> 
+                        Green Line Squares: <span id="green-count-line2"></span>
+                    </div> -->
+                    
+                </div>
+                <hr>
+                <b>Is there a consistent architectural style</b> and uniform shop signage standards, ensuring visual harmony throughout the area?<br><br>
+                <label><input type="radio" name="UrbanDesign" value="Yes"> <b>Yes</b> (Indicative of effective Urban Design)</label>
+                <label><input type="radio" name="UrbanDesign" value="No"> <b>No</b> (Indicative of a lack of adherence to Urban Design principles)</label>
+                <hr>
+
+                <div class="row" style="font-weight: bold; font-size: 18px;">
+                    <div class="col">
+                      <p>O<sub>s</sub> = <span id="OsValue"></span></p>
+                    </div>
+                    <div class="col">
+                      <p>O<sub>p</sub> = <span id="OpValue"></span></p>
+                    </div>
+                    <div class="col">
+                      <p>O<sub>u</sub> = <span id="OuValue"></span></p>
+                    </div>
+                  </div>
+                  <div style="font-weight: bold; font-size: 18px;">
+                    <p>O<sub></sub> = <span id="OallValue"></span></p>
+                  </div>                 
+                  
+                <!-- <form class="form-container">
+                    <label>
+                        <input type="radio" name="street-type" value="mews">
+                        <b>Mews:</b> 7.5 – 12 (m)
+                    </label>
+                    <label>
+                        <input type="radio" name="street-type" value="residential-street">
+                        <b>Residential Street:</b> 12 – 18 (m)
+                    </label>
+                    <label>
+                        <input type="radio" name="street-type" value="high-street">
+                        <b>High Street:</b> 18 – 30 (m)
+                    </label>
+                     <label>
+                        <input type="radio" name="street-type" value="square" disabled>
+                        <s><b>Square:</b> 18 – 100 (m)</s>
+                    </label> 
+                    <label>
+                        <input type="radio" name="street-type" value="boulevard">
+                        <b>Boulevard:</b> 27 – 36 (m)
+                    </label>
+                </form> -->
+            </div>
+            <div class="col COL3">
+                <form id="evaluation-form">
+                    <b>Is there an effective Traffic Control system</b>, such as chicanes, brick roads, or street markings?<br>
+                    <label><input type="radio" name="chicane" value="Yes"> <b>Yes</b> (Effective TC system present)</label>
+                    <label><input type="radio" name="chicane" value="No"> <b>No</b> (No effective TC system)</label>
+                    <br><br>
+                    <b>Is the sidewalk separated from the street by a curb or other barrier</b>, or is it directly adjacent?<br>
+                    <label><input type="radio" name="sidewalk" value="Yes"> <b>Yes</b> (Separated by curb/barrier)</label>
+                    <label><input type="radio" name="sidewalk" value="No"> <b>No</b> (directly adjacent)</label>
+                    <br><br>
+                    <b>Is there a buffer zone between the street and the sidewalk</b>, such as sidewalk fences, car parking, or other barriers?<br>
+                    <label><input type="radio" name="buffer_zone" value="Yes"> <b>Yes</b> (buffer zone present)</label>
+                    <label><input type="radio" name="buffer_zone" value="No"> <b>No</b> (no buffer zone)</label>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="image-container">
+        <img id="uploaded-image" src="" alt="Upload an image">
+        <!-- <canvas id="grid-canvas"></canvas> -->
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Clear all radio buttons on page load
+            document.querySelectorAll('input[type="radio"]').forEach((radio) => {
+                radio.checked = false;
+            });
+
+            // Add event listeners to sidewalk radio buttons
+            document.querySelectorAll('input[name="sidewalk"]').forEach((input) => {
+                input.addEventListener('change', function() {
+                    if (this.value === 'No') {
+                        document.querySelector('input[name="buffer_zone"][value="No"]').checked = true;
+                        document.querySelectorAll('input[name="buffer_zone"]').forEach((bufferInput) => {
+                            bufferInput.disabled = true;
+                        });
+                    } else {
+                        document.querySelectorAll('input[name="buffer_zone"]').forEach((bufferInput) => {
+                            bufferInput.disabled = false;
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
+        document.getElementById('upload').addEventListener('change', function (event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const img = document.getElementById('uploaded-image');
+                    img.src = e.target.result;
+                    img.onload = function () {
+                        drawGrid(img);
+                        window.addEventListener('resize', () => drawGrid(img));
+                    };
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        document.getElementById('remove-image').addEventListener('click', function () {
+            const img = document.getElementById('uploaded-image');
+            img.src = '';
+            const canvas = document.getElementById('grid-canvas');
+            const ctx = canvas.getContext('2d');
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            resetCounts();
+        });
+
+        document.getElementById('reset-all').addEventListener('click', function () {
+            resetCounts();
+        });
+
+        // Variables to store the first and second clicks for red and green lines
+        let firstClickRedCol = -1;
+        let firstClickRedRow = -1;
+        let secondClickRedCol = -1;
+        let secondClickRedRow = -1;
+
+        let firstClickGreenCol = -1;
+        let firstClickGreenRow = -1;
+        let secondClickGreenCol = -1;
+        let secondClickGreenRow = -1;
+
+        
+        // Variables to track click counts on specific squares
+        const redClickCounts = {};
+        const greenClickCounts = {};
+
+        // Function to update click counts
+        function updateClickCount(clickCounts, col, row) {
+            const key = `${col}-${row}`;
+            if (!clickCounts[key]) {
+                clickCounts[key] = 0;
+            }
+            clickCounts[key]++;
+        }
+
+        // Function to get click count
+        function getClickCount(clickCounts, col, row) {
+            const key = `${col}-${row}`;
+            return clickCounts[key] || 0;
+        }
+
+
+        let redCountLine1 = 0;
+        let greenCountLine2 = 0;
+        let yellowCountLine1 = 0;
+        let yellowCountLine2 = 0;
+        const selectedRedSquares = new Set();
+        const selectedGreenSquares = new Set();
+        const selectedYellowSquares = new Set();
+
+        let redClicks = 0;
+        let greenClicks = 0;
+        let startColRed = -1;
+        let startRowRed = -1;
+        let secondColRed = -1;
+        let secondRowRed = -1;
+        let startColGreen = -1;
+        let startRowGreen = -1;
+        let secondColGreen = -1;
+        let secondRowGreen = -1;
+        let thirdColRed = -1;
+        let thirdRowRed = -1;
+        let thirdColGreen = -1;
+        let thirdRowGreen = -1;
+        let fourthColRed = -1;
+        let fourthRowRed = -1;
+        let fourthColGreen = -1;
+        let fourthRowGreen = -1;
+
+        const userSelectedRedSquares = new Set();
+        const userSelectedGreenSquares = new Set();
+
+        let lastHover = { col: -1, row: -1 }; // Store last hover position
+        let currentColor = 'red'; // Start with red
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                lastHover = { col: -1, row: -1 }; // Reset last hover position when the tab loses focus
+            } else {
+                drawGrid(document.getElementById('uploaded-image')); // Redraw the grid without hover effects
+            }
+        });
+
+        function drawGrid(img) {
+            const canvas = document.getElementById('grid-canvas');
+            canvas.width = img.clientWidth;
+            canvas.height = img.clientHeight;
+            const ctx = canvas.getContext('2d');
+            const gridWidth = canvas.width * 0.01;  // 1% of the image width
+            const gridHeight = canvas.height * 0.01; // 1% of the image height
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            for (let x = 0; x < canvas.width; x += gridWidth) {
+                for (let y = 0; y < canvas.height; y += gridHeight) {
+                    ctx.strokeStyle = 'rgba(0, 0, 0, 0.5)';
+                    ctx.strokeRect(x, y, gridWidth, gridHeight);
+                }
+            }
+
+            canvas.onmousemove = function (event) {
+                if ((currentColor === 'red' && redClicks < 4) || (currentColor === 'green' && greenClicks < 4)) { // Check if max squares selected for the current color
+                    const rect = canvas.getBoundingClientRect();
+                    const x = event.clientX - rect.left;
+                    const y = event.clientY - rect.top;
+                    const col = Math.floor(x / gridWidth);
+                    const row = Math.floor(y / gridHeight);
+
+                    if (col !== lastHover.col || row !== lastHover.row) {
+                        lastHover = { col, row };
+                        redrawSelections(ctx, gridWidth, gridHeight);
+
+                        ctx.fillStyle = currentColor === 'red' ? 'rgba(255, 0, 0, 0.75)' : 'rgba(0, 255, 0, 0.75)'; //walking dot!
+                        ctx.fillRect(col * gridWidth, row * gridHeight, gridWidth, gridHeight);
+
+                        // Reapply the highlight
+                        if (redClicks === 1 || greenClicks === 1) {
+                            if (currentColor === 'red') highlightLine(startColRed, startRowRed, 'horizontal', currentColor);
+                            else highlightLine(startColGreen, startRowGreen, 'horizontal', currentColor);
+                        }
+                    }
+                }
+            };
+
+            canvas.onmouseleave = function () {
+                if ((currentColor === 'red' && redClicks < 4) || (currentColor === 'green' && greenClicks < 4)) { // Check if max squares selected for the current color
+                    lastHover = { col: -1, row: -1 }; // Reset last hover position
+                    redrawSelections(ctx, gridWidth, gridHeight);
+
+                    // Reapply the highlight
+                    if (redClicks === 1 || greenClicks === 1) {
+                        if (currentColor === 'red') highlightLine(startColRed, startRowRed, 'horizontal', currentColor);
+                        else highlightLine(startColGreen, startRowGreen, 'horizontal', currentColor);
+                    }
+                }
+            };
+
+// Ensure that the selected squares are tracked correctly
+canvas.onclick = function (event) {
+    const rect = canvas.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    const col = Math.floor(x / gridWidth);
+    const row = Math.floor(y / gridHeight);
+
+    const squareIndex = `${col}-${row}`;
+
+    if ((currentColor === 'red' && redClicks >= 4) || (currentColor === 'green' && greenClicks >= 4)) {
+        return;
+    }
+
+    // Check if the square is already clicked twice for the current color
+    if ((currentColor === 'red' && getClickCount(redClickCounts, col, row) >= 2) || 
+        (currentColor === 'green' && getClickCount(greenClickCounts, col, row) >= 2)) {
+        return;
+    }
+
+    if ((currentColor === 'green' && row === startRowRed) || (currentColor === 'red' && row === startRowGreen)) {
+        return; // Prevent green and red lines from being on the same row
+    }
+
+    if ((currentColor === 'red' && redClicks === 0) || (currentColor === 'green' && greenClicks === 0)) {
+        if (currentColor === 'red') {
+            startColRed = col;
+            startRowRed = row;
+            firstClickRedCol = col;
+            firstClickRedRow = row;
+            redClicks++;
+            userSelectedRedSquares.add(squareIndex);
+        } else {
+            startColGreen = col;
+            startRowGreen = row;
+            firstClickGreenCol = col;
+            firstClickGreenRow = row;
+            greenClicks++;
+            userSelectedGreenSquares.add(squareIndex);
+        }
+        updateClickCount(currentColor === 'red' ? redClickCounts : greenClickCounts, col, row);
+        currentHighlightDirection = 'horizontal';
+        selectSquare(col, row, currentColor, true);
+        highlightLine(col, row, 'horizontal', currentColor);
+    } else if ((currentColor === 'red' && redClicks === 1) || (currentColor === 'green' && greenClicks === 1)) {
+        if (currentColor === 'red' && row === startRowRed) {
+            secondColRed = col;
+            secondRowRed = row;
+            secondClickRedCol = col;
+            secondClickRedRow = row;
+            redClicks++;
+            userSelectedRedSquares.add(squareIndex);
+        } else if (currentColor === 'green' && row === startRowGreen) {
+            secondColGreen = col;
+            secondRowGreen = row;
+            secondClickGreenCol = col;
+            secondClickGreenRow = row;
+            greenClicks++;
+            userSelectedGreenSquares.add(squareIndex);
+        } else {
+            return;
+        }
+        updateClickCount(currentColor === 'red' ? redClickCounts : greenClickCounts, col, row);
+        currentHighlightDirection = 'horizontal';
+        selectSquare(col, row, currentColor, true);
+        if (currentColor === 'red') {
+            selectLine(startColRed, startRowRed, col, row, 'red'); // Draw red line immediately after second click
+        } else {
+            selectLine(startColGreen, startRowGreen, col, row, 'green'); // Draw green line immediately after second click
+        }
+        removeHighlight(); // Remove highlight after the second click
+    } else if ((currentColor === 'red' && redClicks === 2) || (currentColor === 'green' && greenClicks === 2)) {
+        if ((currentColor === 'red' && row === secondRowRed && col >= Math.min(startColRed, secondColRed) && col <= Math.max(startColRed, secondColRed)) || 
+            (currentColor === 'green' && row === secondRowGreen && col >= Math.min(startColGreen, secondColGreen) && col <= Math.max(startColGreen, secondColGreen))) {
+            selectSquare(col, row, 'blue', true); // Third click in blue
+            if (currentColor === 'red') {
+                userSelectedRedSquares.add(squareIndex);
+                redClicks++;
+                thirdColRed = col;
+                thirdRowRed = row;
+            } else {
+                userSelectedGreenSquares.add(squareIndex);
+                greenClicks++;
+                thirdColGreen = col;
+                thirdRowGreen = row;
+            }
+            updateClickCount(currentColor === 'red' ? redClickCounts : greenClickCounts, col, row);
+        }
+    } else if ((currentColor === 'red' && redClicks === 3) || (currentColor === 'green' && greenClicks === 3)) {
+        if ((currentColor === 'red' && row === thirdRowRed && col >= Math.min(startColRed, secondColRed) && col <= Math.max(startColRed, secondColRed)) || 
+            (currentColor === 'green' && row === thirdRowGreen && col >= Math.min(startColGreen, secondColGreen) && col <= Math.max(startColGreen, secondColGreen))) {
+            selectSquare(col, row, 'yellow', true); // Fourth click in yellow
+            if (currentColor === 'red') {
+                userSelectedRedSquares.add(squareIndex);
+                redClicks++;
+                fourthColRed = col;
+                fourthRowRed = row;
+            } else {
+                userSelectedGreenSquares.add(squareIndex);
+                greenClicks++;
+                fourthColGreen = col;
+                fourthRowGreen = row;
+            }
+            if (currentColor === 'red') {
+                selectLine(thirdColRed, thirdRowRed, col, row, 'yellow');
+            } else {
+                selectLine(thirdColGreen, thirdRowGreen, col, row, 'yellow');
+            }
+            updateClickCount(currentColor === 'red' ? redClickCounts : greenClickCounts, col, row);
+            currentHighlightDirection = null;
+            removeHighlight();
+
+            if (currentColor === 'red' && redClicks === 4) {
+                currentColor = 'green';
+            } else if (currentColor === 'green' && greenClicks === 4) {
+                currentColor = 'red'; // or handle if you want to do something else after green
+            }
+        }
+    }
+
+    updateCounts();
+};
+
+
+
+            redrawSelections(ctx, gridWidth, gridHeight);
+
+            // Add highlight line after drawing the grid and selections
+            // if (redClicks > 0 || greenClicks > 0) {
+            //     if (redClicks > 0) highlightLine(startColRed, startRowRed, 'horizontal', 'red');
+            //     if (greenClicks > 0) highlightLine(startColGreen, startRowGreen, 'horizontal', 'green');
+            // }
+        }
+
+function redrawSelections(ctx, gridWidth, gridHeight) {
+    // Clear the entire canvas
+    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+
+    // Redraw grid lines
+    for (let x = 0; x < ctx.canvas.width; x += gridWidth) {
+        for (let y = 0; y < ctx.canvas.height; y += gridHeight) {
+            ctx.strokeStyle = 'rgba(0, 0, 0, 0.5)';
+            ctx.strokeRect(x, y, gridWidth, gridHeight);
+        }
+    }
+
+    // Redraw red squares for the first line
+    selectedRedSquares.forEach(square => {
+        const [col, row] = square.split('-').map(Number);
+        ctx.fillStyle = redClicks > 2 && (thirdColRed === col && thirdRowRed === row || fourthColRed === col && fourthRowRed === row) ? 'rgba(255, 165, 0, 1)' : 'rgba(255, 0, 0, 0.50)';
+        ctx.fillRect(col * gridWidth, row * gridHeight, gridWidth, gridHeight);
+    });
+
+    // Redraw green squares for the second line
+    selectedGreenSquares.forEach(square => {
+        const [col, row] = square.split('-').map(Number);
+        ctx.fillStyle = greenClicks > 2 && (thirdColGreen === col && thirdRowGreen === row || fourthColGreen === col && fourthRowGreen === row) ? 'rgba(255, 165, 0, 1)' : 'rgba(0, 255, 0, 0.50)';
+        ctx.fillRect(col * gridWidth, row * gridHeight, gridWidth, gridHeight);
+    });
+
+    // Redraw yellow squares last to ensure they appear on top
+    selectedYellowSquares.forEach(square => {
+        const [col, row] = square.split('-').map(Number);
+        ctx.fillStyle = 'rgba(255, 255, 0, 0.80)'; // Ensure yellow is always on top
+        ctx.fillRect(col * gridWidth, row * gridHeight, gridWidth, gridHeight);
+    });
+}
+
+function selectSquare(col, row, color, isUserSelected = false) {
+    const ctx = document.getElementById('grid-canvas').getContext('2d');
+    const gridWidth = document.getElementById('grid-canvas').width * 0.01;
+    const gridHeight = document.getElementById('grid-canvas').height * 0.01;
+    const squareIndex = `${col}-${row}`;
+
+// Determine the fill style based on the click count
+if ((color === 'red' && (redClicks === 3 || redClicks === 4)) || (color === 'green' && (greenClicks === 3 || greenClicks === 4))) {
+    ctx.fillStyle = 'rgba(0, 0, 255, 1)'; // Blue color for third and fourth clicks
+} else {
+    ctx.fillStyle = color === 'red' ? 'rgba(255, 0, 0, 0.75)' : (color === 'green' ? 'rgba(0, 255, 0, 0.75)' : 'rgba(255, 165, 0, 1)');
+}
+
+
+    if (color === 'red' && redClicks <= 4) {
+        selectedRedSquares.add(squareIndex);
+    } else if (color === 'green' && greenClicks <= 4) {
+        selectedGreenSquares.add(squareIndex);
+    } else if (color === 'yellow') {
+        selectedYellowSquares.add(squareIndex);
+    }
+
+    ctx.clearRect(col * gridWidth, row * gridHeight, gridWidth, gridHeight);
+    ctx.strokeStyle = 'rgba(0, 0, 0, 0.5)';
+    ctx.strokeRect(col * gridWidth, row * gridHeight, gridWidth, gridHeight);
+    ctx.fillRect(col * gridWidth, row * gridHeight, gridWidth, gridHeight);
+
+    if (isUserSelected) {
+        if (color === 'red') userSelectedRedSquares.add(squareIndex);
+        if (color === 'green') userSelectedGreenSquares.add(squareIndex);
+    }
+}
+
+
+function selectLine(startCol, startRow, endCol, endRow, color) {
+    if (startCol === endCol) {
+        selectVerticalSquares(startCol, startRow, endRow, color);
+    } else if (startRow === endRow) {
+        selectHorizontalSquares(startCol, endCol, startRow, color);
+    }
+}
+
+function selectVerticalSquares(col, startRow, endRow, color) {
+    for (let row = Math.min(startRow, endRow); row <= Math.max(startRow, endRow); row++) {
+        const squareIndex = `${col}-${row}`;
+        selectSquare(col, row, color);
+    }
+}
+
+function selectHorizontalSquares(startCol, endCol, row, color) {
+    for (let col = Math.min(startCol, endCol); col <= Math.max(startCol, endCol); col++) {
+        const squareIndex = `${col}-${row}`;
+        selectSquare(col, row, color);
+    }
+}
+
+function highlightLine(col, row, direction, color) {
+    const canvas = document.getElementById('grid-canvas');
+    const ctx = canvas.getContext('2d');
+    const gridWidth = canvas.width * 0.01;
+    const gridHeight = canvas.height * 0.01;
+
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.25)';  
+    if ((currentColor === 'red' && redClicks < 4) || (currentColor === 'green' && greenClicks < 4) && direction === 'horizontal') {
+        for (let x = 0; x < canvas.width; x += gridWidth) {
+            ctx.fillRect(x, row * gridHeight, gridWidth, gridHeight);
+        }
+    }
+}
+
+function removeHighlight() {
+    const canvas = document.getElementById('grid-canvas');
+    const ctx = canvas.getContext('2d');
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    drawGrid(document.getElementById('uploaded-image'));
+    redrawSelections(ctx, canvas.width * 0.01, canvas.height * 0.01);
+}
+
+function updateCounts() {
+    // Calculate the total squares for each line
+    const totalRedLine1 = calculateTotalSquaresForLine('red');
+    const totalGreenLine2 = calculateTotalSquaresForLine('green');
+
+    // Count yellow squares in each line
+    const yellowCountLine1 = countSquaresInLine(selectedYellowSquares, startRowRed, Math.min(startColRed, secondColRed), Math.max(startColRed, secondColRed));
+    const yellowCountLine2 = countSquaresInLine(selectedYellowSquares, startRowGreen, Math.min(startColGreen, secondColGreen), Math.max(startColGreen, secondColGreen));
+
+    // Calculate red and green counts, subtracting the yellow squares
+    const redCountLine1 = totalRedLine1;
+    // - yellowCountLine1;
+    const greenCountLine2 = totalGreenLine2;
+    //  - yellowCountLine2;
+
+    console.log('1. Total Red Line 1:', totalRedLine1);
+    console.log('2. Total Green Line 2:', totalGreenLine2);
+    console.log('3. Yellow Count Line 1:', yellowCountLine1);
+    console.log('4. Yellow Count Line 2:', yellowCountLine2);
+    console.log('5. Red Count Line 1:', redCountLine1);
+    console.log('6. Green Count Line 2:', greenCountLine2);
+
+    document.getElementById('yellow-count-line1').textContent = yellowCountLine1;
+    document.getElementById('red-count-line1').textContent = redCountLine1;
+    document.getElementById('yellow-count-line2').textContent = yellowCountLine2;
+    document.getElementById('green-count-line2').textContent = greenCountLine2;
+}
+
+function calculateTotalSquaresForLine(color) {
+    let startCol, startRow, secondCol, secondRow;
+    if (color === 'red') {
+        startCol = firstClickRedCol;
+        startRow = firstClickRedRow;
+        secondCol = secondClickRedCol;
+        secondRow = secondClickRedRow;
+    } else {
+        startCol = firstClickGreenCol;
+        startRow = firstClickGreenRow;
+        secondCol = secondClickGreenCol;
+        secondRow = secondClickGreenRow;
+    }
+
+    let totalSquares = 0;
+    if (startCol !== -1 && secondCol !== -1) {
+        totalSquares += Math.abs(secondCol - startCol) + 1;
+    }
+
+    console.log(`${color} line segments:`, { startCol, startRow, secondCol, secondRow });
+    console.log(`${color} Total Squares:`, totalSquares);
+
+    return totalSquares;
+}
+
+
+function countSquaresInLine(selectedSquares, rowIndex, startCol, endCol) {
+    if (!selectedSquares || selectedSquares.size === 0) {
+        console.log('No selected squares for this line');
+        return 0;
+    }
+
+    const squaresArray = Array.from(selectedSquares).map(square => {
+        const [col, row] = square.split('-').map(Number);
+        return { col, row };
+    });
+
+    console.log('Squares Array:', squaresArray);
+
+    const lineSquares = squaresArray.filter(({ col, row }) => {
+        console.log(`Checking col: ${col}, row: ${row} against rowIndex: ${rowIndex}, startCol: ${startCol}, endCol: ${endCol}`);
+        return row === rowIndex && col >= startCol && col <= endCol;
+    });
+
+    console.log('Line Squares:', lineSquares);
+    return lineSquares.length;
+}
+
+function resetCounts() {
+    redClicks = 0;
+    greenClicks = 0;
+    selectedRedSquares.clear();
+    selectedGreenSquares.clear();
+    selectedYellowSquares.clear();
+    userSelectedRedSquares.clear();
+    userSelectedGreenSquares.clear();
+    currentColor = 'red'; // Reset to start with red
+
+    // Reset all coordinates
+    startColRed = -1;
+    startRowRed = -1;
+    secondColRed = -1;
+    secondRowRed = -1;
+    thirdColRed = -1;
+    thirdRowRed = -1;
+    fourthColRed = -1;
+    fourthRowRed = -1;
+
+    startColGreen = -1;
+    startRowGreen = -1;
+    secondColGreen = -1;
+    secondRowGreen = -1;
+    thirdColGreen = -1;
+    thirdRowGreen = -1;
+    fourthColGreen = -1;
+    fourthRowGreen = -1;
+
+    // Reset first and second click coordinates
+    firstClickRedCol = -1;
+    firstClickRedRow = -1;
+    secondClickRedCol = -1;
+    secondClickRedRow = -1;
+    
+    firstClickGreenCol = -1;
+    firstClickGreenRow = -1;
+    secondClickGreenCol = -1;
+    secondClickGreenRow = -1;
+
+    document.getElementById('yellow-count-line1').textContent = "";
+    document.getElementById('red-count-line1').textContent = "";
+    document.getElementById('yellow-count-line2').textContent = "";
+    document.getElementById('green-count-line2').textContent = "";
+
+    updateCounts();
+    drawGrid(document.getElementById('uploaded-image'));
+}
+
+
+    </script>
+<script>
+    /**
+     * Helper: Format the final number.
+     * - Returns an empty string if `value` is null or not a valid number.
+     * - If the value is an integer (like 1 or 0), returns it as "1" or "0".
+     * - Otherwise returns two decimals (e.g., "0.67").
+     */
+    function formatNumber(value) {
+      if (value === null || typeof value === "undefined" || isNaN(value)) {
+        return "";
+      }
+      // If it's an integer, just show integer (e.g., 1 not 1.00).
+      if (Number.isInteger(value)) {
+        return value.toString();
+      }
+      // Otherwise, show 2 decimals
+      return value.toFixed(2);
+    }
+  
+    /**
+     * Calculate O_p = (#Yes in evaluation-form) / 3
+     * Groups: chicane, sidewalk, buffer_zone
+     * If no answers are selected in this group, return null (so it stays blank).
+     */
+    function calculateOp() {
+      const chicane = document.querySelector('input[name="chicane"]:checked');
+      const sidewalk = document.querySelector('input[name="sidewalk"]:checked');
+      const buffer = document.querySelector('input[name="buffer_zone"]:checked');
+  
+      // If no radios checked in this group, return null → blank
+      if (!chicane && !sidewalk && !buffer) {
+        return null;
+      }
+  
+      let sumYes = 0;
+      sumYes += (chicane && chicane.value === "Yes") ? 1 : 0;
+      sumYes += (sidewalk && sidewalk.value === "Yes") ? 1 : 0;
+      sumYes += (buffer && buffer.value === "Yes") ? 1 : 0;
+  
+      // Calculate O_p
+      return sumYes / 3;
+    }
+  
+    /**
+     * Calculate O_s = 1 if “UrbanDesign” = Yes, else 0.
+     * If no selection, return null.
+     */
+    function calculateOs() {
+      const urbanDesign = document.querySelector('input[name="UrbanDesign"]:checked');
+      if (!urbanDesign) {
+        return null;
+      }
+      return (urbanDesign.value === "Yes") ? 1 : 0;
+    }
+  
+    /**
+     * Calculate O_u = (#Yes in #instructions) / 3
+     * Groups: waste_containers, car_parking, public_facilities
+     * If no answers are selected in this group, return null.
+     */
+    function calculateOu() {
+      const waste = document.querySelector('input[name="waste_containers"]:checked');
+      const parking = document.querySelector('input[name="car_parking"]:checked');
+      const facilities = document.querySelector('input[name="public_facilities"]:checked');
+  
+      if (!waste && !parking && !facilities) {
+        return null;
+      }
+  
+      let sumYes = 0;
+      sumYes += (waste && waste.value === "Yes") ? 1 : 0;
+      sumYes += (parking && parking.value === "Yes") ? 1 : 0;
+      sumYes += (facilities && facilities.value === "Yes") ? 1 : 0;
+  
+      // O_u
+      return sumYes / 3;
+    }
+  
+    /**
+     * Oall = (O_s + O_p + O_u) / 3
+     * If ANY is null (meaning one group not answered at all), return null.
+     */
+    function calculateOall(Os, Op, Ou) {
+      if (Os === null || Op === null || Ou === null) {
+        return null;
+      }
+      return (Os + Op + Ou) / 3;
+    }
+  
+    /**
+     * Main update function
+     */
+    function calculateValues() {
+      const Os = calculateOs();
+      const Op = calculateOp();
+      const Ou = calculateOu();
+      const Oall = calculateOall(Os, Op, Ou);
+  
+      // Update the spans
+      document.getElementById("OsValue").textContent = formatNumber(Os);
+      document.getElementById("OpValue").textContent = formatNumber(Op);
+      document.getElementById("OuValue").textContent = formatNumber(Ou);
+      document.getElementById("OallValue").textContent = formatNumber(Oall);
+    }
+  
+    // Attach "change" listeners so any radio selection triggers recalculation
+    document.addEventListener("DOMContentLoaded", function () {
+      const allRadios = document.querySelectorAll('input[type="radio"]');
+      allRadios.forEach(radio => {
+        radio.addEventListener("change", calculateValues);
+      });
+  
+      // Optionally run once in case some defaults are pre-selected
+      calculateValues();
+    });
+  </script>
+  
+      
+</body>
+</html>
