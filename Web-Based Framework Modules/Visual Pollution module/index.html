@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Visual pollution</title>
+    <script>
+        function handleCategoryChange() {
+            const category = document.querySelector('input[name="category"]:checked').value;
+            const statusElements = document.getElementsByName('status');
+
+            if (category === "building" || category === "street") {
+                document.querySelector('input[name="status"][value="Neutral"]').checked = true;
+                statusElements.forEach(element => {
+                    element.disabled = true;
+                });
+            } else {
+                statusElements.forEach(element => {
+                    element.disabled = false;
+                });
+            }
+        }
+
+        function submitForm() {
+            const q1 = document.querySelector('input[name="q1"]:checked').value;
+            const q2 = document.querySelector('input[name="q2"]:checked').value;
+            const q3 = document.querySelector('input[name="q3"]:checked').value;
+
+            if (!(q1 === "yes" && q2 === "yes" && q3 === "yes" )) {
+                alert("NOT A VPO");
+                return;
+            }
+
+            const category = document.querySelector('input[name="category"]:checked').value;
+            const status = document.querySelector('input[name="status"]:checked').value;
+
+            if (status === "positive") {
+                alert("NOT A VPO");
+                return;
+            }
+
+            const objectName = document.getElementById('objectName').value;
+            const negativeAction = document.getElementById('negativeAction').value;
+            const size = document.querySelector('input[name="size"]:checked').value;
+
+            let weight;
+            if (status === "negative") {
+                weight = 5;
+            } else if (category === "building") {
+                weight = 3.75;
+            } else if (category === "other" && status === "Neutral") {
+                weight = 2.5;
+            } else if (category === "street") {
+                weight = 1.25;
+            }
+
+            const xhr = new XMLHttpRequest();
+            xhr.open("POST", "submit.php", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    alert(xhr.responseText);
+                    loadTable();
+                }
+            };
+            xhr.send(`category=${category}&status=${status}&objectName=${objectName}&negativeAction=${negativeAction}&size=${size}&weight=${weight}`);
+        }
+
+        function loadTable() {
+            const xhr = new XMLHttpRequest();
+            xhr.open("GET", "load_table.php", true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    document.getElementById('databaseTable').innerHTML = xhr.responseText;
+                }
+            };
+            xhr.send();
+        }
+
+        window.onload = function () {
+            loadTable();
+        };
+    </script>
+        <style>
+            label {
+                font-size: 20px !important;
+                        }
+        </style>
+</head>
+<body>
+    <h2>Step 1: Validate the object</h2>
+    <label><b>Q1: Is it a physical object?</b></label><br>
+    <label><input type="radio" name="q1" value="yes"> <b>Yes</b> (It is a tangible, physical object)</label>
+    <label><input type="radio" name="q1" value="no"> <b>No</b> (It is an activity or action)</label><br><br>
+    <label><b>Q2: Is it stationary?</b></label><br>
+    <label><input type="radio" name="q2" value="yes"> <b>Yes</b> (It is a fixed object)</label>
+    <label><input type="radio" name="q2" value="no"> <b>No</b> (It is a movable object)</label><br><br>
+    <label><b>Q3: Is it not a specific area or building type?</b></label><br>
+    <label><input type="radio" name="q3" value="yes"> <b>Yes</b> (It is not associated with a particular area or building type)</label>
+    <label><input type="radio" name="q3" value="no"> <b>No</b> (It is tied to a specific location)</label>
+    <br><br><br>
+    <h2>Step 2: Classify the object</h2>
+    <label><b>Object category:</b></label><br>
+    <label><input type="radio" name="category" value="building" onchange="handleCategoryChange()"> Site</label>
+    <label><input type="radio" name="category" value="street" onchange="handleCategoryChange()"> Path</label>
+    <label><input type="radio" name="category" value="other" onchange="handleCategoryChange()"> Urban elements</label><br><br>
+    <label><b>Object type:</b></label><br>
+    <label><input type="radio" name="status" value="negative"> <b>Negative object</b> (Always visually disturbing)</label>
+    <label><input type="radio" name="status" value="Neutral"> <b>Neutral object</b> (Visually improvable)</label>
+    <label><input type="radio" name="status" value="positive"> <b>Positive object</b> (Natural object)</label>
+    <br><br><br>
+    <h2>Step 3: Characterize the object</h2>
+    <label><b>Object Name:</b> <input type="text" id="objectName"></label><br><br>
+    <label><b>Negative Action:</b> <input type="text" id="negativeAction"></label><br><br>
+    <label><b>Object Size:</b></label><BR>
+    <label><input type="radio" name="size" value="large"> Large &#9475;  &#8805; 15 m&sup2;  &#9475; Extremely disturbing</label><br>
+    <label><input type="radio" name="size" value="medium"> Medium &#9475;  5-15 m&sup2;  &#9475; Moderately disturbing</label><br>
+    <label><input type="radio" name="size" value="small"> Small &#9475;  1-5 m&sup2;  &#9475; Slightly disturbing</label><br><br>
+    <button onclick="submitForm()">Submit</button>        <br><br><br>
+    <hr>
+    <h2>VPO Database Table</h2>
+    <div id="databaseTable"></div>
+</body>
+</html>
