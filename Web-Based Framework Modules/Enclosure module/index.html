@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enclosure</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container" id="header">
+      <div class="row">
+        <div class="col COL1" id="instructions">
+          <!-- <p>
+            The Urban Design Compendium (section 5.1. 3) recommends a height to
+            width ratio for streets of between 1:1.5 (0.667 - NARROW) and 1:3
+            (0.333 - WIDE) <br />
+            <hr />
+            where height is provided by buildings (generally measured to the
+            eaves line) and width is the distance between building frontages
+            across the street.
+          </p> -->
+        </div>
+        <div class="col">
+          <input type="file" id="upload" accept="image/*" />
+          <button id="remove-image">Remove Image</button>
+          <button class="reset-button" id="reset-all">Reset All</button>
+          <div id="selected-count">
+            <div class="red-info">
+              <sup>H</sup>&frasl;<sub>W</sub>:
+              <span class="fraction"
+                ><span id="red-horizontal-count"></span
+                ><span id="red-vertical-count"></span
+              ></span>
+              = <span id="red-value"></span>
+
+              <p>E: = <span id="red-e-value"></span></p>
+            </div>
+            <!-- <div class="green-info">
+              GREEN:
+              <span class="fraction"
+                ><span id="green-horizontal-count"></span
+                ><span id="green-vertical-count"></span
+              ></span>
+              = <span id="green-value"></span>
+            </div>
+            <div class="yellow-info">
+              AVG. VALUE:
+              <span class="fraction"
+                ><span id="total-horizontal-count"></span
+                ><span id="total-vertical-count"></span
+              ></span>
+              = <span id="total-value"></span>
+            </div> -->
+          </div>
+          <br />
+          <div>
+            <label for="toggle-view">Diagonals</label>
+            <input type="checkbox" id="toggle-view" />
+          </div>
+        </div>
+        <div class="col COL3">
+          <div id="grid-info">
+            Image Width: <span id="image-width"></span><br />
+            Image Height: <span id="image-height"></span><br />
+
+            <p>Aspect Ratio: <span id="aspect-ratio-value"></span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="image-container">
+      <img id="uploaded-image" src="" alt="Upload an image" />
+      <div id="tooltip" class="tooltip"></div>
+      <canvas id="grid-canvas"></canvas>
+    </div>
+    <script>
+      document
+        .getElementById("upload")
+        .addEventListener("change", function (event) {
+          const file = event.target.files[0];
+          if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+              const img = document.getElementById("uploaded-image");
+              img.src = e.target.result;
+              img.onload = function () {
+                drawGrid(img);
+                calculateAndDisplayAspectRatio(img);
+                window.addEventListener("resize", () => drawGrid(img));
+              };
+            };
+            reader.readAsDataURL(file);
+          }
+        });
+
+      document
+        .getElementById("remove-image")
+        .addEventListener("click", function () {
+          const img = document.getElementById("uploaded-image");
+          img.src = "";
+          const canvas = document.getElementById("grid-canvas");
+          const ctx = canvas.getContext("2d");
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          resetCounts();
+        });
+
+      document
+        .getElementById("reset-all")
+        .addEventListener("click", function () {
+          resetCounts();
+        });
+
+      document
+        .getElementById("toggle-view")
+        .addEventListener("change", function () {
+          const img = document.getElementById("uploaded-image");
+          if (img.src) {
+            drawCurrentView(img);
+          }
+        });
+
+      function drawCurrentView(img) {
+        const viewType = document.getElementById("toggle-view").checked
+          ? "diagonals"
+          : "grid";
+        if (viewType === "diagonals") {
+          drawDiagonals(img);
+        } else {
+          drawGrid(img);
+        }
+      }
+
+      let redCount = 0;
+      let greenCount = 0;
+      let redHorizontalCount = 0;
+      let redVerticalCount = 0;
+      let greenHorizontalCount = 0;
+      let greenVerticalCount = 0;
+      const selectedRedSquares = new Set();
+      const selectedGreenSquares = new Set();
+      const selectedYellowSquares = new Set();
+      const autoSelectedRedSquares = new Set();
+      const autoSelectedGreenSquares = new Set();
+
+      let redClicks = 0;
+      let greenClicks = 0;
+      let startCol = -1;
+      let startRow = -1;
+      let secondCol = -1;
+      let secondRow = -1;
+      let previousAutoSelected = new Set();
+
+      const userSelectedRedSquares = new Set();
+      const userSelectedGreenSquares = new Set();
+
+      let lastHover = { col: -1, row: -1 }; // Store last hover position
+      let currentHighlightDirection = null;
+      let currentColor = "red"; // Start with red
+
+      function drawGrid(img) {
+        const canvas = document.getElementById("grid-canvas");
+        canvas.width = img.clientWidth;
+        canvas.height = img.clientHeight;
+        const ctx = canvas.getContext("2d");
+        const gridWidth = canvas.width * 0.01; // 1% of the image width
+        const gridHeight = canvas.height * 0.01; // 1% of the image height
+
+        // Calculate total columns and rows
+        const totalCols = Math.floor(canvas.width / gridWidth);
+        const totalRows = Math.floor(canvas.height / gridHeight);
+
+        // Update HTML elements with the values
+        document.getElementById("image-width").textContent = canvas.width;
+        document.getElementById("image-height").textContent = canvas.height;
+
+        // Clear canvas before drawing grid
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Draw the grid
+        for (let x = 0; x < canvas.width; x += gridWidth) {
+          for (let y = 0; y < canvas.height; y += gridHeight) {
+            ctx.strokeStyle = "rgba(0, 0, 0, 0.5)"; // Ensure grid is visible
+            ctx.strokeRect(x, y, gridWidth, gridHeight);
+          }
+        }
+
+        // Tooltip logic
+        const tooltip = document.getElementById("tooltip");
+
+        function showGridInfoInTooltip() {
+          tooltip.style.display = "block";
+          tooltip.style.top = "-7px"; // Adjusted for extra row
+          tooltip.style.left = "-11.5px"; // Adjusted for extra column
+
+          // Create column numbers (X) (1 to 50)
+          for (let i = 1; i <= 50; i++) {
+            const number = document.createElement("div");
+            number.classList.add("tooltip-child", "column-number");
+            number.style.left = `${i * 11.6}px`;
+            number.style.top = "-2px";
+            number.style.width = "10px";
+            number.textContent = String(i).padStart(2, "0");
+            tooltip.appendChild(number);
+          }
+
+          // Create column numbers (-X) (-50 to -1)
+          for (let i = -50; i < 0; i++) {
+            // console.log(i); // This will log the value of i to the console
+            const number = document.createElement("div");
+            number.classList.add("tooltip-child", "column-number");
+            number.style.left = `${(i + 51) * 11.6 + 580}px`; // Adjust position to shift negative numbers leftwards
+            number.style.top = "-2px";
+            number.style.width = "10px";
+            number.textContent = String(i).padStart(2, "0");
+            tooltip.appendChild(number);
+          }
+
+          // Create row numbers (Y) (1 to 50)
+          for (let i = 1; i <= 50; i++) {
+            const number = document.createElement("div");
+            number.classList.add("tooltip-child", "row-number");
+            number.style.left = "4.5px";
+            number.style.top = `${i * 5.8}px`;
+            number.style.fontSize = "4.7px";
+            number.textContent = String(i).padStart(2, "0");
+            tooltip.appendChild(number);
+          }
+
+          // Create row numbers (-Y) (-50 to -1)
+          for (let i = -50; i < 0; i++) {
+            const number = document.createElement("div");
+            number.classList.add("tooltip-child", "row-number");
+            number.style.left = "3.5px";
+            number.style.top = `${(i + 51) * 5.8 + 290}px`; // Adjust position to continue after 1 to 50
+            number.style.fontSize = "4.7px";
+            number.textContent = String(i).padStart(2, "0");
+            tooltip.appendChild(number);
+          }
+        }
+
+        // Call the function to show the grid information
+        // showGridInfoInTooltip();
+
+        // Event handlers remain unchanged
+        canvas.onmousemove = function (event) {
+          if (
+            (currentColor === "red" && redClicks < 3) ||
+            (currentColor === "green" && greenClicks < 3)
+          ) {
+            const rect = canvas.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+            const col = Math.floor(x / gridWidth);
+            const row = Math.floor(y / gridHeight);
+
+            if (col !== lastHover.col || row !== lastHover.row) {
+              lastHover = { col, row };
+              redrawSelections(ctx, gridWidth, gridHeight);
+
+              ctx.fillStyle =
+                currentColor === "red"
+                  ? "rgba(255, 0, 0, 0.5)"
+                  : "rgba(0, 255, 0, 0.5)";
+              ctx.fillRect(
+                col * gridWidth,
+                row * gridHeight,
+                gridWidth,
+                gridHeight
+              );
+
+              // Reapply the highlight
+              if (redClicks === 1 || greenClicks === 1) {
+                highlightLine(startCol, startRow, "vertical", currentColor);
+              } else if (redClicks === 2 || greenClicks === 2) {
+                highlightLine(startCol, secondRow, "horizontal", currentColor);
+              }
+            }
+          }
+        };
+
+        canvas.onmouseleave = function () {
+          if (
+            (currentColor === "red" && redClicks < 3) ||
+            (currentColor === "green" && greenClicks < 3)
+          ) {
+            lastHover = { col: -1, row: -1 }; // Reset last hover position
+            redrawSelections(ctx, gridWidth, gridHeight);
+
+            // Reapply the highlight
+            if (redClicks === 1 || greenClicks === 1) {
+              highlightLine(startCol, startRow, "vertical", currentColor);
+            } else if (redClicks === 2 || greenClicks === 2) {
+              highlightLine(startCol, secondRow, "horizontal", currentColor);
+            }
+          }
+        };
+
+        canvas.onclick = function (event) {
+          const rect = canvas.getBoundingClientRect();
+          const x = event.clientX - rect.left;
+          const y = event.clientY - rect.top;
+          const col = Math.floor(x / gridWidth);
+          const row = Math.floor(y / gridHeight);
+
+          const squareIndex = `${col}-${row}`;
+
+          if (
+            (currentColor === "red" && redClicks >= 3) ||
+            (currentColor === "green" && greenClicks >= 3)
+          ) {
+            return;
+          }
+
+          if (
+            (currentColor === "red" &&
+              userSelectedRedSquares.has(squareIndex)) ||
+            (currentColor === "green" &&
+              userSelectedGreenSquares.has(squareIndex))
+          ) {
+            return;
+          }
+
+          if (
+            (currentColor === "red" && redClicks === 0) ||
+            (currentColor === "green" && greenClicks === 0)
+          ) {
+            startCol = col;
+            startRow = row;
+            currentHighlightDirection = "vertical";
+            selectSquare(startCol, startRow, currentColor, true);
+            if (currentColor === "red") {
+              redClicks++;
+              userSelectedRedSquares.add(squareIndex);
+            } else {
+              greenClicks++;
+              userSelectedGreenSquares.add(squareIndex);
+            }
+            highlightLine(col, row, "vertical", currentColor);
+          } else if (
+            (currentColor === "red" && redClicks === 1) ||
+            (currentColor === "green" && greenClicks === 1)
+          ) {
+            if (col === startCol && row > startRow) {
+              secondCol = col;
+              secondRow = row;
+              currentHighlightDirection = "horizontal";
+              selectSquare(col, row, currentColor, true);
+              if (currentColor === "red") {
+                userSelectedRedSquares.add(squareIndex);
+                redClicks++;
+              } else {
+                userSelectedGreenSquares.add(squareIndex);
+                greenClicks++;
+              }
+              deselectPreviousAutoSelection();
+              removeHighlight(); // Clear previous highlight
+              selectLine(startCol, startRow, col, row, currentColor);
+              highlightLine(startCol, secondRow, "horizontal", currentColor);
+            }
+          } else if (
+            (currentColor === "red" && redClicks === 2) ||
+            (currentColor === "green" && greenClicks === 2)
+          ) {
+            if (row === secondRow) {
+              selectSquare(col, row, currentColor, true);
+              if (currentColor === "red") {
+                userSelectedRedSquares.add(squareIndex);
+                redClicks++;
+              } else {
+                userSelectedGreenSquares.add(squareIndex);
+                greenClicks++;
+              }
+              deselectPreviousAutoSelection();
+              selectLine(secondCol, secondRow, col, row, currentColor);
+              currentHighlightDirection = null;
+              removeHighlight();
+
+              // Switch to the next color
+              if (currentColor === "red" && redClicks === 3) {
+                currentColor = "green";
+              } else if (currentColor === "green" && greenClicks === 3) {
+                currentColor = "red"; // or handle if you want to do something else after green
+              }
+            }
+          }
+
+          updateCounts();
+        };
+
+        redrawSelections(ctx, gridWidth, gridHeight);
+      }
+
+      function drawDiagonals(img) {
+        const canvas = document.getElementById("grid-canvas");
+        canvas.width = img.clientWidth;
+        canvas.height = img.clientHeight;
+        const ctx = canvas.getContext("2d");
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Set stroke style and line width
+        ctx.strokeStyle = "rgba(255, 0, 0, 0.75)"; // Red color with 75% opacity
+        ctx.lineWidth = 2; // Increase line width
+
+        // Draw the diagonals
+        ctx.beginPath();
+        ctx.moveTo(0, 0);
+        ctx.lineTo(canvas.width, canvas.height);
+        ctx.moveTo(canvas.width, 0);
+        ctx.lineTo(0, canvas.height);
+        ctx.stroke();
+      }
+
+      function selectSquare(col, row, color, isUserSelected = false) {
+        const ctx = document.getElementById("grid-canvas").getContext("2d");
+        const gridWidth = document.getElementById("grid-canvas").width * 0.01;
+        const gridHeight = document.getElementById("grid-canvas").height * 0.01;
+        const squareIndex = `${col}-${row}`;
+
+        const squaresSet =
+          color === "red" ? selectedRedSquares : selectedGreenSquares;
+        const oppositeSet =
+          color === "red" ? selectedGreenSquares : selectedRedSquares;
+        const overlapSet = selectedYellowSquares;
+        const autoSet =
+          color === "red" ? autoSelectedRedSquares : autoSelectedGreenSquares;
+
+        if (oppositeSet.has(squareIndex)) {
+          overlapSet.add(squareIndex);
+          squaresSet.add(squareIndex); // Add to both sets to maintain reference
+          oppositeSet.delete(squareIndex);
+        } else if (
+          !squaresSet.has(squareIndex) &&
+          !overlapSet.has(squareIndex)
+        ) {
+          squaresSet.add(squareIndex);
+        }
+
+        ctx.clearRect(col * gridWidth, row * gridHeight, gridWidth, gridHeight);
+        ctx.strokeStyle = "rgba(0, 0, 0, 0.5)";
+        ctx.strokeRect(
+          col * gridWidth,
+          row * gridHeight,
+          gridWidth,
+          gridHeight
+        );
+
+        if (overlapSet.has(squareIndex)) {
+          ctx.fillStyle = "rgba(255, 255, 0, 0.75)";
+        } else if (squaresSet.has(squareIndex)) {
+          ctx.fillStyle =
+            color === "red" ? "rgba(255, 0, 0, 0.75)" : "rgba(0, 255, 0, 0.75)";
+        }
+
+        ctx.fillRect(col * gridWidth, row * gridHeight, gridWidth, gridHeight);
+
+        if (isUserSelected) {
+          if (color === "red") userSelectedRedSquares.add(squareIndex);
+          if (color === "green") userSelectedGreenSquares.add(squareIndex);
+        } else {
+          autoSet.add(squareIndex);
+        }
+      }
+
+      function deselectPreviousAutoSelection() {
+        previousAutoSelected.forEach((square) => {
+          const [col, row] = square.split("-").map(Number);
+          const ctx = document.getElementById("grid-canvas").getContext("2d");
+          const gridWidth = document.getElementById("grid-canvas").width * 0.01;
+          const gridHeight =
+            document.getElementById("grid-canvas").height * 0.01;
+
+          ctx.clearRect(
+            col * gridWidth,
+            row * gridHeight,
+            gridWidth,
+            gridHeight
+          );
+          ctx.strokeStyle = "rgba(0, 0, 0, 0.5)";
+          ctx.strokeRect(
+            col * gridWidth,
+            row * gridHeight,
+            gridWidth,
+            gridHeight
+          );
+        });
+        previousAutoSelected.clear();
+      }
+
+      function selectLine(startCol, startRow, endCol, endRow, color) {
+        if (startCol === endCol) {
+          selectVerticalSquares(startCol, startRow, endRow, color);
+        } else if (startRow === endRow) {
+          selectHorizontalSquares(startCol, endCol, startRow, color);
+        }
+      }
+
+      function selectVerticalSquares(col, startRow, endRow, color) {
+        for (
+          let row = Math.min(startRow, endRow);
+          row <= Math.max(startRow, endRow);
+          row++
+        ) {
+          const squareIndex = `${col}-${row}`;
+          previousAutoSelected.add(squareIndex);
+          selectSquare(col, row, color);
+        }
+      }
+
+      function selectHorizontalSquares(startCol, endCol, row, color) {
+        for (
+          let col = Math.min(startCol, endCol);
+          col <= Math.max(startCol, endCol);
+          col++
+        ) {
+          const squareIndex = `${col}-${row}`;
+          previousAutoSelected.add(squareIndex);
+          selectSquare(col, row, color);
+        }
+      }
+
+      function highlightLine(col, row, direction, color) {
+        const canvas = document.getElementById("grid-canvas");
+        const ctx = canvas.getContext("2d");
+        const gridWidth = canvas.width * 0.01;
+        const gridHeight = canvas.height * 0.01;
+
+        ctx.fillStyle = "rgba(255, 255, 255, 0.25)";
+
+        if (direction === "vertical") {
+          for (
+            let y = (row + 1) * gridHeight;
+            y < canvas.height;
+            y += gridHeight
+          ) {
+            ctx.fillRect(col * gridWidth, y, gridWidth, gridHeight);
+          }
+        } else if (direction === "horizontal") {
+          for (let x = 0; x < canvas.width; x += gridWidth) {
+            ctx.fillRect(x, row * gridHeight, gridWidth, gridHeight);
+          }
+        }
+      }
+
+      function removeHighlight() {
+        const canvas = document.getElementById("grid-canvas");
+        const ctx = canvas.getContext("2d");
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        drawGrid(document.getElementById("uploaded-image"));
+        redrawSelections(ctx, canvas.width * 0.01, canvas.height * 0.01);
+      }
+
+      function updateCounts() {
+        redHorizontalCount = calculateHorizontalCount("red");
+        redVerticalCount = calculateVerticalCount("red");
+        greenHorizontalCount = calculateHorizontalCount("green");
+        greenVerticalCount = calculateVerticalCount("green");
+
+        const redValue = redHorizontalCount / redVerticalCount || 0;
+        const greenValue = greenHorizontalCount / greenVerticalCount || 0;
+        const totalHorizontalCount = redHorizontalCount + greenHorizontalCount;
+        const totalVerticalCount = redVerticalCount + greenVerticalCount;
+        const totalValue = totalHorizontalCount / totalVerticalCount || 0;
+
+        document.getElementById("red-horizontal-count").textContent =
+          redHorizontalCount > 0 ? redHorizontalCount : "";
+        document.getElementById("red-vertical-count").textContent =
+          redVerticalCount > 0 ? redVerticalCount : "";
+        document.getElementById("red-value").textContent =
+          redHorizontalCount > 0 && redVerticalCount > 0
+            ? redValue.toFixed(3)
+            : "";
+        // document.getElementById("green-horizontal-count").textContent =
+        //   greenHorizontalCount > 0 ? greenHorizontalCount : "";
+        // document.getElementById("green-vertical-count").textContent =
+        //   greenVerticalCount > 0 ? greenVerticalCount : "";
+        // document.getElementById("green-value").textContent =
+        //   greenHorizontalCount > 0 && greenVerticalCount > 0
+        //     ? greenValue.toFixed(3)
+        //     : "";
+        // document.getElementById("total-horizontal-count").textContent =
+        //   totalHorizontalCount > 0 ? totalHorizontalCount : "";
+        // document.getElementById("total-vertical-count").textContent =
+        //   totalVerticalCount > 0 ? totalVerticalCount : "";
+        // document.getElementById("total-value").textContent =
+        //   totalHorizontalCount > 0 && totalVerticalCount > 0
+        //     ? totalValue.toFixed(3)
+        //     : "";
+
+        // Update colors based on value ranges
+        // updateValueColor(document.getElementById("red-value"), redValue);
+        // updateValueColor(document.getElementById("green-value"), greenValue);
+        // updateValueColor(document.getElementById("total-value"), totalValue);
+
+
+        // Calculate result1 only if there are counts to avoid setting default values incorrectly
+        let result1 = "";
+        if (totalHorizontalCount > 0 && totalVerticalCount > 0) {
+          result1 = totalValue;
+          if (result1 > 0.5) {
+            result1 = result1 + result1 * 0.1;
+          } else {
+            result1 = result1 - result1 * 0.1;
+          }
+          result1 = result1.toFixed(3);
+        }
+        // document.getElementById("result1").textContent = result1;
+
+        // Calculate result2 and result3 based on result1
+        // let result2 = "";
+        // let result3 = "";
+        // if (result1) {
+        //   if (result1 >= 0.3 && result1 <= 0.733) {
+        //     result2 = "5";
+        //     result3 = "GOOD ENCLOSURE";
+        //   } else {
+        //     result2 = "3";
+        //     if (result1 > 0.733) {
+        //       result3 = "NARROW";
+        //     } else if (result1 < 0.3) {
+        //       result3 = "WIDE";
+        //     }
+        //   }
+        // }
+        // document.getElementById("result2").textContent = result2;
+        // document.getElementById("result3").textContent = result3;
+
+        // updateValueColor(
+        //   document.getElementById("result1"),
+        //   parseFloat(result1)
+        // );
+        // updateValueColor(document.getElementById("result2"), result2);
+        // updateValueColor(document.getElementById("result3"), result3);
+
+        // Calculate E for red counts: ratio of the smaller to the larger count.
+        let redE = 0;
+        if (redHorizontalCount > 0 && redVerticalCount > 0) {
+  let value = (redHorizontalCount / redVerticalCount) / currentAspectRatio;
+  redE = value > 1 ? 1 / value : value;
+}
+
+
+
+// Update an element in the HTML to display E.
+// Make sure you have an element with id "red-e-value" in your HTML.
+document.getElementById("red-e-value").textContent = redE ? redE.toFixed(3) : "";
+// document.getElementById("red-e-value").textContent = redE.toFixed(3);
+
+// updateValueColor(document.getElementById("red-e-value"), redE);
+// console.log("redHorizontalCount:", redHorizontalCount, "redVerticalCount:", redVerticalCount, "redE:", redE);
+
+      }
+
+      // function updateValueColor(element, value) {
+      //   if (typeof value === "number") {
+      //     if (value >= 0.333 && value <= 0.667) {
+      //       element.style.color = "green";
+      //     } else {
+      //       element.style.color = "red";
+      //     }
+      //   } else if (typeof value === "string") {
+      //     if (value === "5" || value === "GOOD ENCLOSURE") {
+      //       element.style.color = "green";
+      //     } else {
+      //       element.style.color = "red";
+      //     }
+      //   }
+      // }
+
+      function calculateHorizontalCount(color) {
+        const selectedSquares =
+          color === "red" ? selectedRedSquares : selectedGreenSquares;
+        const overlapSquares = selectedYellowSquares;
+        const countedRows = new Set();
+        selectedSquares.forEach((square) => {
+          const [col, row] = square.split("-").map(Number);
+          countedRows.add(row);
+        });
+        overlapSquares.forEach((square) => {
+          const [col, row] = square.split("-").map(Number);
+          countedRows.add(row);
+        });
+        return countedRows.size;
+      }
+
+      function calculateVerticalCount(color) {
+        const selectedSquares =
+          color === "red" ? selectedRedSquares : selectedGreenSquares;
+        const overlapSquares = selectedYellowSquares;
+        const countedCols = new Set();
+        selectedSquares.forEach((square) => {
+          const [col, row] = square.split("-").map(Number);
+          countedCols.add(col);
+        });
+        overlapSquares.forEach((square) => {
+          const [col, row] = square.split("-").map(Number);
+          countedCols.add(col);
+        });
+        return countedCols.size;
+      }
+
+      function resetCounts() {
+        redClicks = 0;
+        greenClicks = 0;
+        redHorizontalCount = 0;
+        redVerticalCount = 0;
+        greenHorizontalCount = 0;
+        greenVerticalCount = 0;
+        selectedRedSquares.clear();
+        selectedGreenSquares.clear();
+        selectedYellowSquares.clear();
+        autoSelectedRedSquares.clear();
+        autoSelectedGreenSquares.clear();
+        userSelectedRedSquares.clear();
+        userSelectedGreenSquares.clear();
+        previousAutoSelected.clear();
+        currentColor = "red"; // Reset to start with red
+
+        document.getElementById("red-horizontal-count").textContent = "";
+        document.getElementById("red-vertical-count").textContent = "";
+        document.getElementById("red-value").textContent = "";
+        // document.getElementById("green-horizontal-count").textContent = "";
+        // document.getElementById("green-vertical-count").textContent = "";
+        // document.getElementById("green-value").textContent = "";
+        // document.getElementById("total-horizontal-count").textContent = "";
+        // document.getElementById("total-vertical-count").textContent = "";
+        // document.getElementById("total-value").textContent = "";
+
+        // document.getElementById("result1").textContent = "";
+        // document.getElementById("result2").textContent = "";
+        // document.getElementById("result3").textContent = "";
+
+        document.getElementById("red-e-value").textContent = "";
+        updateCounts();
+        drawGrid(document.getElementById("uploaded-image"));
+      }
+
+      function redrawSelections(ctx, gridWidth, gridHeight) {
+        // Clear the entire canvas
+        ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+
+        selectedRedSquares.forEach((square) => {
+          const [col, row] = square.split("-").map(Number);
+          if (selectedYellowSquares.has(square)) {
+            ctx.fillStyle = "rgba(255, 255, 0, 0.75)";
+          } else if (userSelectedRedSquares.has(square)) {
+            ctx.fillStyle = "rgba(255, 0, 0, 0.75)";
+          } else {
+            ctx.fillStyle = "rgba(255, 0, 0, 0.5)";
+          }
+          ctx.fillRect(
+            col * gridWidth,
+            row * gridHeight,
+            gridWidth,
+            gridHeight
+          );
+        });
+
+        selectedGreenSquares.forEach((square) => {
+          const [col, row] = square.split("-").map(Number);
+          if (selectedYellowSquares.has(square)) {
+            ctx.fillStyle = "rgba(255, 255, 0, 0.75)";
+          } else if (userSelectedGreenSquares.has(square)) {
+            ctx.fillStyle = "rgba(0, 255, 0, 0.75)";
+          } else {
+            ctx.fillStyle = "rgba(0, 255, 0, 0.5)";
+          }
+          ctx.fillRect(
+            col * gridWidth,
+            row * gridHeight,
+            gridWidth,
+            gridHeight
+          );
+        });
+
+        // Redraw grid lines
+        for (let x = 0; x < ctx.canvas.width; x += gridWidth) {
+          for (let y = 0; y < ctx.canvas.height; y += gridHeight) {
+            ctx.strokeStyle = "rgba(0, 0, 0, 0.5)";
+            ctx.strokeRect(x, y, gridWidth, gridHeight);
+          }
+        }
+      }
+
+      function highlightRemainingSelection(color) {
+        if (color === "red") {
+          if (userSelectedRedSquares.size > 0) {
+            const [startSquare] = userSelectedRedSquares;
+            const [startCol, startRow] = startSquare.split("-").map(Number);
+            if (userSelectedRedSquares.size === 1) {
+              highlightLine(startCol, startRow, "vertical", "red");
+            } else {
+              const secondSquare = Array.from(userSelectedRedSquares)[1];
+              const [, secondRow] = secondSquare.split("-").map(Number);
+              highlightLine(startCol, secondRow, "horizontal", "red");
+            }
+          }
+        } else if (color === "green") {
+          if (userSelectedGreenSquares.size > 0) {
+            const [startSquare] = userSelectedGreenSquares;
+            const [startCol, startRow] = startSquare.split("-").map(Number);
+            if (userSelectedGreenSquares.size === 1) {
+              highlightLine(startCol, startRow, "vertical", "green");
+            } else {
+              const secondSquare = Array.from(userSelectedGreenSquares)[1];
+              const [, secondRow] = secondSquare.split("-").map(Number);
+              highlightLine(startCol, secondRow, "horizontal", "green");
+            }
+          }
+        }
+      }
+
+      function calculateAndDisplayAspectRatio(img) {
+        const width = img.naturalWidth;
+        const height = img.naturalHeight;
+
+        // Calculate the aspect ratio with width fixed at 2
+        const heightRatio = (2 * height) / width;
+
+        // Round to two decimal places
+        const roundedHeightRatio = Math.round(heightRatio * 100) / 100;
+
+        // Create the aspect ratio string
+        const aspectRatio = `2:${roundedHeightRatio}`;
+
+        // Store the numeric value globally for later use
+        currentAspectRatio = 2/roundedHeightRatio;
+
+        // Update the grid-info div
+        const aspectRatioValue = document.getElementById("aspect-ratio-value");
+
+        // Check if the element exists and then update the text content
+        if (aspectRatioValue) {
+          aspectRatioValue.textContent = aspectRatio;
+        } else {
+          console.error('Element with id "aspect-ratio-value" not found.');
+        }
+      }
+    </script>
+  </body>
+</html>
