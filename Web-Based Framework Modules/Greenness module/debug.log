@@ -1,0 +1,2138 @@
+Command: python3 green_coverage.py ^"uploads/6652545800bf3.jpg^" ^"uploads/6652545800bf6_mask.png^"
+Output: 
+Return code: 9009
+Command: python3 "green_coverage.py" "uploads/665254a9cb494.jpg" "uploads/665254a9cb496_mask.png"
+Output: 
+Return code: 9009
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/6652558b3ab5d.jpg" "uploads/6652558b3ab60_mask.png"
+Python script started.
+Mask saved to uploads/6652558b3ab60_mask.png
+Python script finished.
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665257207b66c.jpg" "uploads/665257207b66f_mask.png"
+Python script started.
+Mask saved to uploads/665257207b66f_mask.png
+Python script finished.
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/6652572e49340.jpg" "uploads/6652572e49342_mask.png"
+Python script started.
+Mask saved to uploads/6652572e49342_mask.png
+Python script finished.
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665257e5f3d56.jpg" "uploads/665257e5f3d58_mask.png"
+Python script started.
+Mask saved to uploads/665257e5f3d58_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665258387530d.jpg" "uploads/6652583875310_mask.png"
+Python script started.
+Mask saved to uploads/6652583875310_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665258c91131f.jpg" "uploads/665258c911321_mask.png"
+Python script started.
+Mask saved to uploads/665258c911321_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/6652593d5c09b.jpg" "uploads/6652593d5c09e_mask.png"
+Python script started.
+Mask saved to uploads/6652593d5c09e_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665259bf48922.jpg" "uploads/665259bf48925_mask.png"
+Python script started.
+Mask saved to uploads/665259bf48925_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/66525ab0e1b75.jpg" "uploads/66525ab0e1b78_mask.png"
+Python script started.
+Mask saved to uploads/66525ab0e1b78_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/66525c718e0a8.jpg" "uploads/66525c718e0ac_mask.png"
+Python script started.
+Mask saved to uploads/66525c718e0ac_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/66525c846a90b.jpg" "uploads/66525c846a90d_mask.png"
+Python script started.
+Mask saved to uploads/66525c846a90d_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/66526249a83be.jpg" "uploads/66526249a83c1_mask.png"
+Python script started.
+Mask saved to uploads/66526249a83c1_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a3f0b82b43.jpg" "uploads/665a3f0b82fb9_mask.png"
+Python script started.
+Mask saved to uploads/665a3f0b82fb9_mask.png
+Green percentage: 2.28%
+Python script finished. Green percentage: 2.28%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a3f1ba0b26.jpg" "uploads/665a3f1ba0b28_mask.png"
+Python script started.
+Mask saved to uploads/665a3f1ba0b28_mask.png
+Green percentage: 2.28%
+Python script finished. Green percentage: 2.28%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a43979b576.jpg" "uploads/665a43979b578_mask.png"
+Python script started.
+Mask saved to uploads/665a43979b578_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a478ca7d57.jpg" "uploads/665a478ca7d5b_mask.png"
+Python script started.
+Mask saved to uploads/665a478ca7d5b_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a479c37613.jpg" "uploads/665a479c37615_mask.png"
+Python script started.
+Mask saved to uploads/665a479c37615_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a4a2fd9749.jpg" "uploads/665a4a2fd974c_mask.png"
+Python script started.
+Mask saved to uploads/665a4a2fd974c_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a4a7237e72.jpg" "uploads/665a4a7237e75_mask.png"
+Python script started.
+Mask saved to uploads/665a4a7237e75_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a4b098ec1f.jpg" "uploads/665a4b098ec22_mask.png"
+Python script started.
+Mask saved to uploads/665a4b098ec22_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a4df66e062.jpg" "uploads/665a4df66e065_mask.png"
+Python script started.
+Mask saved to uploads/665a4df66e065_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a4f9b644e0.jpg" "uploads/665a4f9b644e4_mask.png"
+Python script started.
+Mask saved to uploads/665a4f9b644e4_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a50ea88c71.jpg" "uploads/665a50ea88c73_mask.png"
+Python script started.
+Mask saved to uploads/665a50ea88c73_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a53ce66bf8.jpg" "uploads/665a53ce66bfb_mask.png"
+Python script started.
+Mask saved to uploads/665a53ce66bfb_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a5446ae9fa.jpg" "uploads/665a5446ae9fc_mask.png"
+Python script started.
+Mask saved to uploads/665a5446ae9fc_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a548223d3e.jpg" "uploads/665a548223d40_mask.png"
+Python script started.
+Mask saved to uploads/665a548223d40_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a5488e254b.jpg" "uploads/665a5488e254d_mask.png"
+Python script started.
+Mask saved to uploads/665a5488e254d_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a54c769edc.jpg" "uploads/665a54c769ede_mask.png"
+Python script started.
+Mask saved to uploads/665a54c769ede_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a54e6a3d60.jpg" "uploads/665a54e6a3d62_mask.png"
+Python script started.
+Mask saved to uploads/665a54e6a3d62_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a555c643ec.jpg" "uploads/665a555c643ee_mask.png"
+Python script started.
+Mask saved to uploads/665a555c643ee_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a5629096b6.jpg" "uploads/665a5629096b8_mask.png"
+Python script started.
+Mask saved to uploads/665a5629096b8_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a5683eee95.jpg" "uploads/665a5683eee97_mask.png"
+Python script started.
+Mask saved to uploads/665a5683eee97_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a568ca2399.jpg" "uploads/665a568ca239c_mask.png"
+Python script started.
+Mask saved to uploads/665a568ca239c_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a57146a6f7.jpg" "uploads/665a57146a6fb_mask.png"
+Python script started.
+Mask saved to uploads/665a57146a6fb_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a57b5debec.jpg" "uploads/665a57b5debef_mask.png"
+Python script started.
+Mask saved to uploads/665a57b5debef_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a584ad467b.jpg" "uploads/665a584ad467d_mask.png"
+Python script started.
+Mask saved to uploads/665a584ad467d_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a58c627000.jpg" "uploads/665a58c627003_mask.png"
+Python script started.
+Mask saved to uploads/665a58c627003_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a5932e4a00.jpg" "uploads/665a5932e4a04_mask.png"
+Python script started.
+Mask saved to uploads/665a5932e4a04_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a5975d487a.jpg" "uploads/665a5975d487c_mask.png"
+Python script started.
+Mask saved to uploads/665a5975d487c_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a598b228fc.jpg" "uploads/665a598b228ff_mask.png"
+Python script started.
+Mask saved to uploads/665a598b228ff_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a5a4043dd1.jpg" "uploads/665a5a4043dd5_mask.png"
+Python script started.
+Mask saved to uploads/665a5a4043dd5_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a5aaf53a30.jpg" "uploads/665a5aaf53a32_mask.png"
+Python script started.
+Mask saved to uploads/665a5aaf53a32_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a5ae28ef06.jpg" "uploads/665a5ae28ef08_mask.png"
+Python script started.
+Mask saved to uploads/665a5ae28ef08_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a5c0f52f4d.jpg" "uploads/665a5c0f52f50_mask.png"
+Python script started.
+Mask saved to uploads/665a5c0f52f50_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a5caa8c0a1.jpg" "uploads/665a5caa8c0a3_mask.png"
+Python script started.
+Mask saved to uploads/665a5caa8c0a3_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a5cf9b3012.jpg" "uploads/665a5cf9b3015_mask.png"
+Python script started.
+Mask saved to uploads/665a5cf9b3015_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a5d1f46b37.jpg" "uploads/665a5d1f46b39_mask.png"
+Python script started.
+Mask saved to uploads/665a5d1f46b39_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a5e0b2d76d.jpg" "uploads/665a5e0b2d770_mask.png"
+Python script started.
+Mask saved to uploads/665a5e0b2d770_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a5f52f131f.jpg" "uploads/665a5f52f1322_mask.png"
+Python script started.
+Mask saved to uploads/665a5f52f1322_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a5f9001d98.jpg" "uploads/665a5f9001d9a_mask.png"
+Python script started.
+Mask saved to uploads/665a5f9001d9a_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a5fa3a9a9c.jpg" "uploads/665a5fa3a9a9e_mask.png"
+Python script started.
+Mask saved to uploads/665a5fa3a9a9e_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a609172e9e.jpg" "uploads/665a609172ea1_mask.png"
+Python script started.
+Mask saved to uploads/665a609172ea1_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a60f0ddac4.jpg" "uploads/665a60f0ddac7_mask.png"
+Python script started.
+Mask saved to uploads/665a60f0ddac7_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a6931526e7.jpg" "uploads/665a6931526ea_mask.png"
+Python script started.
+Mask saved to uploads/665a6931526ea_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a6a3a12dc1.jpg" "uploads/665a6a3a12dc4_mask.png"
+Python script started.
+Mask saved to uploads/665a6a3a12dc4_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a6a486b457.jpg" "uploads/665a6a486b459_mask.png"
+Python script started.
+Mask saved to uploads/665a6a486b459_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a6a611fa57.jpg" "uploads/665a6a611fa59_mask.png"
+Python script started.
+Mask saved to uploads/665a6a611fa59_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a6a6a7736e.jpg" "uploads/665a6a6a77370_mask.png"
+Python script started.
+Mask saved to uploads/665a6a6a77370_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a6a8cb4fac.jpg" "uploads/665a6a8cb4faf_mask.png"
+Python script started.
+Mask saved to uploads/665a6a8cb4faf_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a6c14105ad.jpg" "uploads/665a6c14105b0_mask.png"
+Python script started.
+Mask saved to uploads/665a6c14105b0_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a6c3819236.jpg" "uploads/665a6c3819238_mask.png"
+Python script started.
+Mask saved to uploads/665a6c3819238_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a6c697960f.jpg" "uploads/665a6c6979615_mask.png"
+Python script started.
+Mask saved to uploads/665a6c6979615_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a6cbf0cf91.jpg" "uploads/665a6cbf0cf93_mask.png"
+Python script started.
+Mask saved to uploads/665a6cbf0cf93_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a6e00c1cb0.jpg" "uploads/665a6e00c1cb3_mask.png"
+Python script started.
+Mask saved to uploads/665a6e00c1cb3_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a6e132f16f.jpg" "uploads/665a6e132f171_mask.png"
+Python script started.
+Mask saved to uploads/665a6e132f171_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a6ebf474d6.jpg" "uploads/665a6ebf474d9_mask.png"
+Python script started.
+Mask saved to uploads/665a6ebf474d9_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a6f15d14ee.jpg" "uploads/665a6f15d14f0_mask.png"
+Python script started.
+Mask saved to uploads/665a6f15d14f0_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a6fb599abb.jpg" "uploads/665a6fb599abe_mask.png"
+Python script started.
+Mask saved to uploads/665a6fb599abe_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a70092c89f.jpg" "uploads/665a70092c8a1_mask.png"
+Python script started.
+Mask saved to uploads/665a70092c8a1_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a710d66bbe.jpg" "uploads/665a710d66bc0_mask.png"
+Python script started.
+Mask saved to uploads/665a710d66bc0_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a71338b10f.jpg" "uploads/665a71338b113_mask.png"
+Python script started.
+Mask saved to uploads/665a71338b113_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a715f26b57.jpg" "uploads/665a715f26b5c_mask.png"
+Python script started.
+Mask saved to uploads/665a715f26b5c_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a718da59c3.jpg" "uploads/665a718da59c6_mask.png"
+Python script started.
+Mask saved to uploads/665a718da59c6_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a721c28a2b.jpg" "uploads/665a721c28a2d_mask.png"
+Python script started.
+Mask saved to uploads/665a721c28a2d_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a7292633d7.jpg" "uploads/665a7292633d9_mask.png"
+Python script started.
+Mask saved to uploads/665a7292633d9_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a72a22c2af.jpg" "uploads/665a72a22c2b1_mask.png"
+Python script started.
+Mask saved to uploads/665a72a22c2b1_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a72be68475.jpg" "uploads/665a72be68477_mask.png"
+Python script started.
+Mask saved to uploads/665a72be68477_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a72d36660f.jpg" "uploads/665a72d366611_mask.png"
+Python script started.
+Mask saved to uploads/665a72d366611_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a72e2566a0.jpg" "uploads/665a72e2566a2_mask.png"
+Python script started.
+Mask saved to uploads/665a72e2566a2_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a734c30969.jpg" "uploads/665a734c3096c_mask.png"
+Python script started.
+Mask saved to uploads/665a734c3096c_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a735a97e44.jpg" "uploads/665a735a97e46_mask.png"
+Python script started.
+Mask saved to uploads/665a735a97e46_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a739426696.jpg" "uploads/665a739426698_mask.png"
+Python script started.
+Mask saved to uploads/665a739426698_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a739e2ec3d.jpg" "uploads/665a739e2ec3f_mask.png"
+Python script started.
+Mask saved to uploads/665a739e2ec3f_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a73b6b868c.jpg" "uploads/665a73b6b868e_mask.png"
+Python script started.
+Mask saved to uploads/665a73b6b868e_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a7441a5d68.jpg" "uploads/665a7441a5d6a_mask.png"
+Python script started.
+Mask saved to uploads/665a7441a5d6a_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a745844905.jpg" "uploads/665a745844907_mask.png"
+Python script started.
+Mask saved to uploads/665a745844907_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a74768a7e9.jpg" "uploads/665a74768a7eb_mask.png"
+Python script started.
+Mask saved to uploads/665a74768a7eb_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a755145538.jpg" "uploads/665a75514553a_mask.png"
+Python script started.
+Mask saved to uploads/665a75514553a_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a757d1bd2f.jpg" "uploads/665a757d1bd32_mask.png"
+Python script started.
+Mask saved to uploads/665a757d1bd32_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a759d03cb4.jpg" "uploads/665a759d03cb6_mask.png"
+Python script started.
+Mask saved to uploads/665a759d03cb6_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a75b1cd7ae.jpg" "uploads/665a75b1cd7b0_mask.png"
+Python script started.
+Mask saved to uploads/665a75b1cd7b0_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a76d5a7ab7.jpg" "uploads/665a76d5a7aba_mask.png"
+Python script started.
+Mask saved to uploads/665a76d5a7aba_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a76f0c31e5.jpg" "uploads/665a76f0c31e7_mask.png"
+Python script started.
+Mask saved to uploads/665a76f0c31e7_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a77202da87.jpg" "uploads/665a77202da89_mask.png"
+Python script started.
+Mask saved to uploads/665a77202da89_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a77e0ac142.jpg" "uploads/665a77e0ac145_mask.png"
+Python script started.
+Mask saved to uploads/665a77e0ac145_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a7871539ac.jpg" "uploads/665a7871539af_mask.png"
+Python script started.
+Mask saved to uploads/665a7871539af_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a78ca62ef3.jpg" "uploads/665a78ca62ef5_mask.png"
+Python script started.
+Mask saved to uploads/665a78ca62ef5_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a78dec0406.jpg" "uploads/665a78dec0408_mask.png"
+Python script started.
+Mask saved to uploads/665a78dec0408_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a793b93acd.jpg" "uploads/665a793b93acf_mask.png"
+Python script started.
+Mask saved to uploads/665a793b93acf_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a79acd14ca.jpg" "uploads/665a79acd14cc_mask.png"
+Python script started.
+Mask saved to uploads/665a79acd14cc_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a7a0577d99.jpg" "uploads/665a7a0577d9b_mask.png"
+Python script started.
+Mask saved to uploads/665a7a0577d9b_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a7a50b1d5e.jpg" "uploads/665a7a50b1d60_mask.png"
+Python script started.
+Mask saved to uploads/665a7a50b1d60_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a7b0804874.jpg" "uploads/665a7b0804878_mask.png"
+Python script started.
+Mask saved to uploads/665a7b0804878_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a7b295d5f3.jpg" "uploads/665a7b295d5f5_mask.png"
+Python script started.
+Mask saved to uploads/665a7b295d5f5_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a7b45e3c3d.jpg" "uploads/665a7b45e3c3f_mask.png"
+Python script started.
+Mask saved to uploads/665a7b45e3c3f_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a7b6e08397.jpg" "uploads/665a7b6e08399_mask.png"
+Python script started.
+Mask saved to uploads/665a7b6e08399_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a7c3bd5611.jpg" "uploads/665a7c3bd5614_mask.png"
+Python script started.
+Mask saved to uploads/665a7c3bd5614_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a7ccc6bd77.jpg" "uploads/665a7ccc6bd79_mask.png"
+Python script started.
+Mask saved to uploads/665a7ccc6bd79_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a7e31a06ae.jpg" "uploads/665a7e31a06b1_mask.png"
+Python script started.
+Mask saved to uploads/665a7e31a06b1_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a7e55d005b.jpg" "uploads/665a7e55d005d_mask.png"
+Python script started.
+Mask saved to uploads/665a7e55d005d_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a7ef9c26cd.jpg" "uploads/665a7ef9c26cf_mask.png"
+Python script started.
+Mask saved to uploads/665a7ef9c26cf_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a7f6725b5a.jpg" "uploads/665a7f6725b5c_mask.png"
+Python script started.
+Mask saved to uploads/665a7f6725b5c_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a7f72a97f7.jpg" "uploads/665a7f72a97f9_mask.png"
+Python script started.
+Mask saved to uploads/665a7f72a97f9_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a806a7efeb.jpg" "uploads/665a806a7efee_mask.png"
+Python script started.
+Mask saved to uploads/665a806a7efee_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a8101bb5c4.jpg" "uploads/665a8101bb5c7_mask.png"
+Python script started.
+Mask saved to uploads/665a8101bb5c7_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a8112a1357.jpg" "uploads/665a8112a1359_mask.png"
+Python script started.
+Mask saved to uploads/665a8112a1359_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a811f82f4e.jpg" "uploads/665a811f82f50_mask.png"
+Python script started.
+Mask saved to uploads/665a811f82f50_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a813d17910.jpg" "uploads/665a813d17912_mask.png"
+Python script started.
+Mask saved to uploads/665a813d17912_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a828825183.jpg" "uploads/665a828825186_mask.png"
+Python script started.
+Mask saved to uploads/665a828825186_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a82bfd7852.jpg" "uploads/665a82bfd7854_mask.png"
+Python script started.
+Mask saved to uploads/665a82bfd7854_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a833cc5f5c.jpg" "uploads/665a833cc5f5f_mask.png"
+Python script started.
+Mask saved to uploads/665a833cc5f5f_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a83dd5d2ba.jpg" "uploads/665a83dd5d2bc_mask.png"
+Python script started.
+Mask saved to uploads/665a83dd5d2bc_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a847aa1ea5.jpg" "uploads/665a847aa1ea8_mask.png"
+Python script started.
+Mask saved to uploads/665a847aa1ea8_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a84f496997.jpg" "uploads/665a84f496999_mask.png"
+Python script started.
+Mask saved to uploads/665a84f496999_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a851273b92.jpg" "uploads/665a851273b94_mask.png"
+Python script started.
+Mask saved to uploads/665a851273b94_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a852172a09.jpg" "uploads/665a852172a0b_mask.png"
+Python script started.
+Mask saved to uploads/665a852172a0b_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a85b2a5f5f.jpg" "uploads/665a85b2a5f61_mask.png"
+Python script started.
+Mask saved to uploads/665a85b2a5f61_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a85d8b14a3.jpg" "uploads/665a85d8b14a5_mask.png"
+Python script started.
+Mask saved to uploads/665a85d8b14a5_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a86148f36f.jpg" "uploads/665a86148f372_mask.png"
+Python script started.
+Mask saved to uploads/665a86148f372_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665a862a45cff.jpg" "uploads/665a862a45d01_mask.png"
+Python script started.
+Mask saved to uploads/665a862a45d01_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b12272fa77.jpg" "uploads/665b12272fa7d_mask.png"
+Python script started.
+Mask saved to uploads/665b12272fa7d_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b127d0b333.jpg" "uploads/665b127d0b335_mask.png"
+Python script started.
+Mask saved to uploads/665b127d0b335_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b142d3ce35.jpg" "uploads/665b142d3ce38_mask.png"
+Python script started.
+Mask saved to uploads/665b142d3ce38_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b145f297b4.jpg" "uploads/665b145f297b6_mask.png"
+Python script started.
+Mask saved to uploads/665b145f297b6_mask.png
+Green percentage: 2.28%
+Python script finished. Green percentage: 2.28%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b146cb0ad1.jpg" "uploads/665b146cb0ad3_mask.png"
+Python script started.
+Mask saved to uploads/665b146cb0ad3_mask.png
+Green percentage: 2.61%
+Python script finished. Green percentage: 2.61%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b14707b9b9.jpg" "uploads/665b14707b9ba_mask.png"
+Python script started.
+Mask saved to uploads/665b14707b9ba_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b14749d112.jpg" "uploads/665b14749d114_mask.png"
+Python script started.
+Mask saved to uploads/665b14749d114_mask.png
+Green percentage: 3.58%
+Python script finished. Green percentage: 3.58%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b147821d77.jpg" "uploads/665b147821d7a_mask.png"
+Python script started.
+Mask saved to uploads/665b147821d7a_mask.png
+Green percentage: 7.41%
+Python script finished. Green percentage: 7.41%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b1484b8084.jpg" "uploads/665b1484b8087_mask.png"
+Python script started.
+Mask saved to uploads/665b1484b8087_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b149563352.jpg" "uploads/665b149563354_mask.png"
+Python script started.
+Mask saved to uploads/665b149563354_mask.png
+Green percentage: 3.58%
+Python script finished. Green percentage: 3.58%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b15154fabf.jpg" "uploads/665b15154fac2_mask.png"
+Python script started.
+Mask saved to uploads/665b15154fac2_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b15650398f.jpg" "uploads/665b156503992_mask.png"
+Python script started.
+Mask saved to uploads/665b156503992_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b158854700.jpg" "uploads/665b158854702_mask.png"
+Python script started.
+Mask saved to uploads/665b158854702_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b158e57f8b.jpg" "uploads/665b158e57f8f_mask.png"
+Python script started.
+Mask saved to uploads/665b158e57f8f_mask.png
+Green percentage: 2.61%
+Python script finished. Green percentage: 2.61%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b15d64146d.jpg" "uploads/665b15d64146f_mask.png"
+Python script started.
+Mask saved to uploads/665b15d64146f_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b15e031d3b.jpg" "uploads/665b15e031d3e_mask.png"
+Python script started.
+Mask saved to uploads/665b15e031d3e_mask.png
+Green percentage: 2.28%
+Python script finished. Green percentage: 2.28%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b167f40e67.jpg" "uploads/665b167f40e69_mask.png"
+Python script started.
+Mask saved to uploads/665b167f40e69_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b16ba53ed5.jpg" "uploads/665b16ba53ed7_mask.png"
+Python script started.
+Mask saved to uploads/665b16ba53ed7_mask.png
+Green percentage: 2.28%
+Python script finished. Green percentage: 2.28%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b16c0b9f2c.jpg" "uploads/665b16c0b9f2e_mask.png"
+Python script started.
+Mask saved to uploads/665b16c0b9f2e_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b1748e8785.jpg" "uploads/665b1748e8788_mask.png"
+Python script started.
+Mask saved to uploads/665b1748e8788_mask.png
+Green percentage: 2.28%
+Python script finished. Green percentage: 2.28%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b17c365a2b.jpg" "uploads/665b17c365a2e_mask.png"
+Python script started.
+Mask saved to uploads/665b17c365a2e_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b18052a2e9.jpg" "uploads/665b18052a2eb_mask.png"
+Python script started.
+Mask saved to uploads/665b18052a2eb_mask.png
+Green percentage: 2.28%
+Python script finished. Green percentage: 2.28%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b181d995ac.jpg" "uploads/665b181d995af_mask.png"
+Python script started.
+Mask saved to uploads/665b181d995af_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b189e56345.jpg" "uploads/665b189e56348_mask.png"
+Python script started.
+Mask saved to uploads/665b189e56348_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b18f6170a4.jpg" "uploads/665b18f6170a6_mask.png"
+Python script started.
+Mask saved to uploads/665b18f6170a6_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b190b5c6e4.jpg" "uploads/665b190b5c6e6_mask.png"
+Python script started.
+Mask saved to uploads/665b190b5c6e6_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b1a5f91d08.jpg" "uploads/665b1a5f91d0c_mask.png"
+Python script started.
+Mask saved to uploads/665b1a5f91d0c_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b1ae30a380.jpg" "uploads/665b1ae30a383_mask.png"
+Python script started.
+Mask saved to uploads/665b1ae30a383_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b1bbb17e1b.jpg" "uploads/665b1bbb17e1d_mask.png"
+Python script started.
+Mask saved to uploads/665b1bbb17e1d_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b1bf445bfa.jpg" "uploads/665b1bf445bfc_mask.png"
+Python script started.
+Mask saved to uploads/665b1bf445bfc_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b1cbaa8d79.jpg" "uploads/665b1cbaa8d7b_mask.png"
+Python script started.
+Mask saved to uploads/665b1cbaa8d7b_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b1cd61962c.jpg" "uploads/665b1cd61962e_mask.png"
+Python script started.
+Mask saved to uploads/665b1cd61962e_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b1d259aee8.jpg" "uploads/665b1d259aeea_mask.png"
+Python script started.
+Mask saved to uploads/665b1d259aeea_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b1d3b208dc.jpg" "uploads/665b1d3b208de_mask.png"
+Python script started.
+Mask saved to uploads/665b1d3b208de_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b1d7067868.jpg" "uploads/665b1d706786a_mask.png"
+Python script started.
+Mask saved to uploads/665b1d706786a_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b1d8124bf6.jpg" "uploads/665b1d8124bf8_mask.png"
+Python script started.
+Mask saved to uploads/665b1d8124bf8_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b1dd936517.jpg" "uploads/665b1dd936518_mask.png"
+Python script started.
+Mask saved to uploads/665b1dd936518_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b1df92b076.jpg" "uploads/665b1df92b079_mask.png"
+Python script started.
+Mask saved to uploads/665b1df92b079_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b1e8bb8fcd.jpg" "uploads/665b1e8bb8fcf_mask.png"
+Python script started.
+Mask saved to uploads/665b1e8bb8fcf_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b1ea493369.jpg" "uploads/665b1ea49336b_mask.png"
+Python script started.
+Mask saved to uploads/665b1ea49336b_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b1eb03a6af.jpg" "uploads/665b1eb03a6b1_mask.png"
+Python script started.
+Mask saved to uploads/665b1eb03a6b1_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b1ebf3823e.jpg" "uploads/665b1ebf38241_mask.png"
+Python script started.
+Mask saved to uploads/665b1ebf38241_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b1ec9dee0f.jpg" "uploads/665b1ec9dee11_mask.png"
+Python script started.
+Mask saved to uploads/665b1ec9dee11_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b1ed533f65.jpg" "uploads/665b1ed533f67_mask.png"
+Python script started.
+Mask saved to uploads/665b1ed533f67_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b1f1027c52.jpg" "uploads/665b1f1027c55_mask.png"
+Python script started.
+Mask saved to uploads/665b1f1027c55_mask.png
+Green percentage: 2.28%
+Python script finished. Green percentage: 2.28%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b1fb129743.jpg" "uploads/665b1fb129746_mask.png"
+Python script started.
+Mask saved to uploads/665b1fb129746_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b1fbf15147.jpg" "uploads/665b1fbf15149_mask.png"
+Python script started.
+Mask saved to uploads/665b1fbf15149_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b1fd7c6fa4.jpg" "uploads/665b1fd7c6fa6_mask.png"
+Python script started.
+Mask saved to uploads/665b1fd7c6fa6_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b200860e91.jpg" "uploads/665b200860e93_mask.png"
+Python script started.
+Mask saved to uploads/665b200860e93_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b202f1413f.jpg" "uploads/665b202f14142_mask.png"
+Python script started.
+Mask saved to uploads/665b202f14142_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b204f06ad6.jpg" "uploads/665b204f06ae5_mask.png"
+Python script started.
+Mask saved to uploads/665b204f06ae5_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b210709338.jpg" "uploads/665b21070933b_mask.png"
+Python script started.
+Mask saved to uploads/665b21070933b_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b22123b47f.jpg" "uploads/665b22123b482_mask.png"
+Python script started.
+Mask saved to uploads/665b22123b482_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b22b256b2c.jpg" "uploads/665b22b256b2e_mask.png"
+Python script started.
+Mask saved to uploads/665b22b256b2e_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b22f69b792.jpg" "uploads/665b22f69b795_mask.png"
+Python script started.
+Mask saved to uploads/665b22f69b795_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b23817772b.jpg" "uploads/665b23817772d_mask.png"
+Python script started.
+Mask saved to uploads/665b23817772d_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b23a558a4a.jpg" "uploads/665b23a558a4d_mask.png"
+Python script started.
+Mask saved to uploads/665b23a558a4d_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b23cfbfe58.jpg" "uploads/665b23cfbfe5a_mask.png"
+Python script started.
+Mask saved to uploads/665b23cfbfe5a_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b2421b0e00.jpg" "uploads/665b2421b0e02_mask.png"
+Python script started.
+Mask saved to uploads/665b2421b0e02_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b24fb15ffc.jpg" "uploads/665b24fb15fff_mask.png"
+Python script started.
+Mask saved to uploads/665b24fb15fff_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b251418a13.jpg" "uploads/665b251418a15_mask.png"
+Python script started.
+Mask saved to uploads/665b251418a15_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b25c8a3f31.jpg" "uploads/665b25c8a3f33_mask.png"
+Python script started.
+Mask saved to uploads/665b25c8a3f33_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b25e104eab.jpg" "uploads/665b25e104ead_mask.png"
+Python script started.
+Mask saved to uploads/665b25e104ead_mask.png
+Green percentage: 2.28%
+Python script finished. Green percentage: 2.28%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b25e70dd8f.jpg" "uploads/665b25e70dd91_mask.png"
+Python script started.
+Mask saved to uploads/665b25e70dd91_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b25ebe124e.jpg" "uploads/665b25ebe1250_mask.png"
+Python script started.
+Mask saved to uploads/665b25ebe1250_mask.png
+Green percentage: 2.28%
+Python script finished. Green percentage: 2.28%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b26801d8ce.jpg" "uploads/665b26801d8d1_mask.png"
+Python script started.
+Mask saved to uploads/665b26801d8d1_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b26987e592.jpg" "uploads/665b26987e594_mask.png"
+Python script started.
+Mask saved to uploads/665b26987e594_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b26a9beca9.jpg" "uploads/665b26a9becac_mask.png"
+Python script started.
+Mask saved to uploads/665b26a9becac_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b26b5e8e19.jpg" "uploads/665b26b5e8e20_mask.png"
+Python script started.
+Mask saved to uploads/665b26b5e8e20_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b26e22cef3.jpg" "uploads/665b26e22cef7_mask.png"
+Python script started.
+Mask saved to uploads/665b26e22cef7_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b26fa0f5b8.jpg" "uploads/665b26fa0f5ba_mask.png"
+Python script started.
+Mask saved to uploads/665b26fa0f5ba_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b27145253e.jpg" "uploads/665b271452541_mask.png"
+Python script started.
+Mask saved to uploads/665b271452541_mask.png
+Green percentage: 2.28%
+Python script finished. Green percentage: 2.28%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b28e5063de.jpg" "uploads/665b28e5063e1_mask.png"
+Python script started.
+Mask saved to uploads/665b28e5063e1_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b2a746fac9.jpg" "uploads/665b2a746facc_mask.png"
+Python script started.
+Mask saved to uploads/665b2a746facc_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b2ab569f70.jpg" "uploads/665b2ab569f73_mask.png"
+Python script started.
+Mask saved to uploads/665b2ab569f73_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b2ad2322f0.jpg" "uploads/665b2ad2322f3_mask.png"
+Python script started.
+Mask saved to uploads/665b2ad2322f3_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b2b1372ddb.jpg" "uploads/665b2b1372ddd_mask.png"
+Python script started.
+Mask saved to uploads/665b2b1372ddd_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b2b2f5ff21.jpg" "uploads/665b2b2f5ff24_mask.png"
+Python script started.
+Mask saved to uploads/665b2b2f5ff24_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b2b474ae5e.jpg" "uploads/665b2b474ae60_mask.png"
+Python script started.
+Mask saved to uploads/665b2b474ae60_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b2b5870b23.jpg" "uploads/665b2b5870b26_mask.png"
+Python script started.
+Mask saved to uploads/665b2b5870b26_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b2b83dd56d.jpg" "uploads/665b2b83dd56f_mask.png"
+Python script started.
+Mask saved to uploads/665b2b83dd56f_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b2ba7b198c.jpg" "uploads/665b2ba7b198e_mask.png"
+Python script started.
+Mask saved to uploads/665b2ba7b198e_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b2bc81dba8.jpg" "uploads/665b2bc81dbaa_mask.png"
+Python script started.
+Mask saved to uploads/665b2bc81dbaa_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b2bfa58e26.jpg" "uploads/665b2bfa58e28_mask.png"
+Python script started.
+Mask saved to uploads/665b2bfa58e28_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b2c2a86d58.jpg" "uploads/665b2c2a86d5b_mask.png"
+Python script started.
+Mask saved to uploads/665b2c2a86d5b_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b2cf19ed3f.jpg" "uploads/665b2cf19ed42_mask.png"
+Python script started.
+Mask saved to uploads/665b2cf19ed42_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b2d2f7335b.jpg" "uploads/665b2d2f7335d_mask.png"
+Python script started.
+Mask saved to uploads/665b2d2f7335d_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b2d5cb5d9c.jpg" "uploads/665b2d5cb5d9e_mask.png"
+Python script started.
+Mask saved to uploads/665b2d5cb5d9e_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b2d73db9e6.jpg" "uploads/665b2d73db9e8_mask.png"
+Python script started.
+Mask saved to uploads/665b2d73db9e8_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b2d9b27605.jpg" "uploads/665b2d9b27607_mask.png"
+Python script started.
+Mask saved to uploads/665b2d9b27607_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b2ddae623f.jpg" "uploads/665b2ddae6241_mask.png"
+Python script started.
+Mask saved to uploads/665b2ddae6241_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b2e128b857.jpg" "uploads/665b2e128b85a_mask.png"
+Python script started.
+Mask saved to uploads/665b2e128b85a_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b2e6f571f1.jpg" "uploads/665b2e6f57209_mask.png"
+Python script started.
+Mask saved to uploads/665b2e6f57209_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b2e855861d.jpg" "uploads/665b2e855861f_mask.png"
+Python script started.
+Mask saved to uploads/665b2e855861f_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b2eb16b8dc.jpg" "uploads/665b2eb16b8df_mask.png"
+Python script started.
+Mask saved to uploads/665b2eb16b8df_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b2eec81db5.jpg" "uploads/665b2eec81db7_mask.png"
+Python script started.
+Mask saved to uploads/665b2eec81db7_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b2f02f15cf.jpg" "uploads/665b2f02f15d2_mask.png"
+Python script started.
+Mask saved to uploads/665b2f02f15d2_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b2f1d6abd5.jpg" "uploads/665b2f1d6abd7_mask.png"
+Python script started.
+Mask saved to uploads/665b2f1d6abd7_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b2f319e12f.jpg" "uploads/665b2f319e131_mask.png"
+Python script started.
+Mask saved to uploads/665b2f319e131_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b2f4d28c2d.jpg" "uploads/665b2f4d28c33_mask.png"
+Python script started.
+Mask saved to uploads/665b2f4d28c33_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b2f5fdef3d.jpg" "uploads/665b2f5fdef3f_mask.png"
+Python script started.
+Mask saved to uploads/665b2f5fdef3f_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b2f981e666.jpg" "uploads/665b2f981e669_mask.png"
+Python script started.
+Mask saved to uploads/665b2f981e669_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b2fa97a25a.jpg" "uploads/665b2fa97a25c_mask.png"
+Python script started.
+Mask saved to uploads/665b2fa97a25c_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b2fcf1732d.jpg" "uploads/665b2fcf1732f_mask.png"
+Python script started.
+Mask saved to uploads/665b2fcf1732f_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b3012266d7.jpg" "uploads/665b3012266d9_mask.png"
+Python script started.
+Mask saved to uploads/665b3012266d9_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b3021442fd.jpg" "uploads/665b3021442ff_mask.png"
+Python script started.
+Mask saved to uploads/665b3021442ff_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b3040843b3.jpg" "uploads/665b3040843b5_mask.png"
+Python script started.
+Mask saved to uploads/665b3040843b5_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b305bae6f4.jpg" "uploads/665b305bae6f7_mask.png"
+Python script started.
+Mask saved to uploads/665b305bae6f7_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b306e28fc7.jpg" "uploads/665b306e28fc9_mask.png"
+Python script started.
+Mask saved to uploads/665b306e28fc9_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b3085c95a0.jpg" "uploads/665b3085c95a2_mask.png"
+Python script started.
+Mask saved to uploads/665b3085c95a2_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b30b47a681.jpg" "uploads/665b30b47a685_mask.png"
+Python script started.
+Mask saved to uploads/665b30b47a685_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b31019713e.jpg" "uploads/665b310197141_mask.png"
+Python script started.
+Mask saved to uploads/665b310197141_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b3131b58a6.jpg" "uploads/665b3131b58a9_mask.png"
+Python script started.
+Mask saved to uploads/665b3131b58a9_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665b9bf61f37d.jpg" "uploads/665b9bf61f385_mask.png"
+Python script started.
+Mask saved to uploads/665b9bf61f385_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665e1e28de6d2.jpg" "uploads/665e1e28de6d5_mask.png"
+Python script started.
+Mask saved to uploads/665e1e28de6d5_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665e1e33098c1.jpg" "uploads/665e1e33098c3_mask.png"
+Python script started.
+Mask saved to uploads/665e1e33098c3_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665e21cb094ad.jpg" "uploads/665e21cb094b0_mask.png"
+Python script started.
+Mask saved to uploads/665e21cb094b0_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665e2248c2ece.jpg" "uploads/665e2248c2ed0_mask.png"
+Python script started.
+Mask saved to uploads/665e2248c2ed0_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665e24399e862.jpg" "uploads/665e24399e865_mask.png"
+Python script started.
+Mask saved to uploads/665e24399e865_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665e2459a0c5c.jpg" "uploads/665e2459a0c5e_mask.png"
+Python script started.
+Mask saved to uploads/665e2459a0c5e_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665e258fe9e39.jpg" "uploads/665e258fe9e3c_mask.png"
+Python script started.
+Mask saved to uploads/665e258fe9e3c_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665e29c9bd4dd.jpg" "uploads/665e29c9bd4e0_mask.png"
+Python script started.
+Mask saved to uploads/665e29c9bd4e0_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665e2c2c886c6.jpg" "uploads/665e2c2c886c9_mask.png"
+Python script started.
+Mask saved to uploads/665e2c2c886c9_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665e2c68e84d7.jpg" "uploads/665e2c68e84d9_mask.png"
+Python script started.
+Mask saved to uploads/665e2c68e84d9_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665e2c9bdc0c9.jpg" "uploads/665e2c9bdc0cb_mask.png"
+Python script started.
+Mask saved to uploads/665e2c9bdc0cb_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665e2e004c48f.jpg" "uploads/665e2e004c492_mask.png"
+Python script started.
+Mask saved to uploads/665e2e004c492_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665e2ecdbb11c.jpg" "uploads/665e2ecdbb11f_mask.png"
+Python script started.
+Mask saved to uploads/665e2ecdbb11f_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665e2f2bba38b.jpg" "uploads/665e2f2bba38d_mask.png"
+Python script started.
+Mask saved to uploads/665e2f2bba38d_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665e2f529c875.jpg" "uploads/665e2f529c87b_mask.png"
+Python script started.
+Mask saved to uploads/665e2f529c87b_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665e2f66eb7f9.jpg" "uploads/665e2f66eb7fb_mask.png"
+Python script started.
+Mask saved to uploads/665e2f66eb7fb_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665e2f7162320.jpg" "uploads/665e2f7162322_mask.png"
+Python script started.
+Mask saved to uploads/665e2f7162322_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665e3058031f2.jpg" "uploads/665e3058031f5_mask.png"
+Python script started.
+Mask saved to uploads/665e3058031f5_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665e3185cf757.jpg" "uploads/665e3185cf759_mask.png"
+Python script started.
+Mask saved to uploads/665e3185cf759_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665e3294612b9.jpg" "uploads/665e3294612bb_mask.png"
+Python script started.
+Mask saved to uploads/665e3294612bb_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665e33d2a9aa4.jpg" "uploads/665e33d2a9aa6_mask.png"
+Python script started.
+Mask saved to uploads/665e33d2a9aa6_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665e34029739c.jpg" "uploads/665e34029739e_mask.png"
+Python script started.
+Mask saved to uploads/665e34029739e_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665e343f3a89a.jpg" "uploads/665e343f3a89d_mask.png"
+Python script started.
+Mask saved to uploads/665e343f3a89d_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665e348178243.jpg" "uploads/665e348178245_mask.png"
+Python script started.
+Mask saved to uploads/665e348178245_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/665e3558341e6.jpg" "uploads/665e3558341e9_mask.png"
+Python script started.
+Mask saved to uploads/665e3558341e9_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/66621d959ab85.jpg" "uploads/66621d959adaf_mask.png"
+Python script started.
+Mask saved to uploads/66621d959adaf_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/66647cfdd3a44.jpg" "uploads/66647cfdd3a4a_mask.png"
+Python script started.
+Mask saved to uploads/66647cfdd3a4a_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/6664cadfb85a0.jpg" "uploads/6664cadfb85a7_mask.png"
+Python script started.
+Mask saved to uploads/6664cadfb85a7_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/6664cf7285444.jpg" "uploads/6664cf7285447_mask.png"
+Python script started.
+Mask saved to uploads/6664cf7285447_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/6664d4776ace2.jpg" "uploads/6664d4776ace5_mask.png"
+Python script started.
+Mask saved to uploads/6664d4776ace5_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/6664d7fc41117.jpg" "uploads/6664d7fc41119_mask.png"
+Python script started.
+Mask saved to uploads/6664d7fc41119_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/6664d81cc7545.jpg" "uploads/6664d81cc7547_mask.png"
+Python script started.
+Mask saved to uploads/6664d81cc7547_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/6664d87e6f467.jpg" "uploads/6664d87e6f469_mask.png"
+Python script started.
+Mask saved to uploads/6664d87e6f469_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/6664e222c553a.jpg" "uploads/6664e222c553d_mask.png"
+Python script started.
+Mask saved to uploads/6664e222c553d_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/6664e2369fd45.jpg" "uploads/6664e2369fd47_mask.png"
+Python script started.
+Mask saved to uploads/6664e2369fd47_mask.png
+Green percentage: 2.28%
+Python script finished. Green percentage: 2.28%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/6664e23ac7114.jpg" "uploads/6664e23ac7116_mask.png"
+Python script started.
+Mask saved to uploads/6664e23ac7116_mask.png
+Green percentage: 2.28%
+Python script finished. Green percentage: 2.28%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/6664e23f084c0.jpg" "uploads/6664e23f084c2_mask.png"
+Python script started.
+Mask saved to uploads/6664e23f084c2_mask.png
+Green percentage: 2.61%
+Python script finished. Green percentage: 2.61%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/6664e248278a3.jpg" "uploads/6664e248278a5_mask.png"
+Python script started.
+Mask saved to uploads/6664e248278a5_mask.png
+Green percentage: 3.58%
+Python script finished. Green percentage: 3.58%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/6664e2502b7c8.jpg" "uploads/6664e2502b7cb_mask.png"
+Python script started.
+Mask saved to uploads/6664e2502b7cb_mask.png
+Green percentage: 7.41%
+Python script finished. Green percentage: 7.41%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/6682a17c936e7.jpg" "uploads/6682a17c936ea_mask.png"
+Python script started.
+Mask saved to uploads/6682a17c936ea_mask.png
+Green percentage: 8.85%
+Python script finished. Green percentage: 8.85%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/6682a2e434de6.jpg" "uploads/6682a2e434de8_mask.png"
+Python script started.
+Mask saved to uploads/6682a2e434de8_mask.png
+Green percentage: 2.28%
+Python script finished. Green percentage: 2.28%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/6682a3cad583e.jpg" "uploads/6682a3cad5841_mask.png"
+Python script started.
+Mask saved to uploads/6682a3cad5841_mask.png
+Green percentage: 2.61%
+Python script finished. Green percentage: 2.61%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/6682a478baa00.jpg" "uploads/6682a478baa02_mask.png"
+Python script started.
+Mask saved to uploads/6682a478baa02_mask.png
+Green percentage: 3.58%
+Python script finished. Green percentage: 3.58%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/6682a5577e0a4.jpg" "uploads/6682a5577e0a7_mask.png"
+Python script started.
+Mask saved to uploads/6682a5577e0a7_mask.png
+Green percentage: 7.41%
+Python script finished. Green percentage: 7.41%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/6689b6ba616be.jpg" "uploads/6689b6ba616c2_mask.png"
+Python script started.
+Mask saved to uploads/6689b6ba616c2_mask.png
+Green percentage: 2.64%
+Python script finished. Green percentage: 2.64%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/6689b74628d78.jpg" "uploads/6689b74628d7b_mask.png"
+Python script started.
+Mask saved to uploads/6689b74628d7b_mask.png
+Green percentage: 2.25%
+Python script finished. Green percentage: 2.25%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/6689b7f0ec5cb.jpg" "uploads/6689b7f0ec5cf_mask.png"
+Python script started.
+Mask saved to uploads/6689b7f0ec5cf_mask.png
+Green percentage: 5.63%
+Python script finished. Green percentage: 5.63%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/6689b8a6628b2.jpg" "uploads/6689b8a6628b5_mask.png"
+Python script started.
+Mask saved to uploads/6689b8a6628b5_mask.png
+Green percentage: 5.93%
+Python script finished. Green percentage: 5.93%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/6689b94f11fbd.jpg" "uploads/6689b94f11fc1_mask.png"
+Python script started.
+Mask saved to uploads/6689b94f11fc1_mask.png
+Green percentage: 10.69%
+Python script finished. Green percentage: 10.69%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/6695a5dcc74e7.jpg" "uploads/6695a5dcc74ea_mask.png"
+Python script started.
+Mask saved to uploads/6695a5dcc74ea_mask.png
+Green percentage: 2.84%
+Python script finished. Green percentage: 2.84%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/6695a66777270.jpg" "uploads/6695a66777273_mask.png"
+Python script started.
+Mask saved to uploads/6695a66777273_mask.png
+Green percentage: 1.18%
+Python script finished. Green percentage: 1.18%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/6695a70ca61c9.jpg" "uploads/6695a70ca61cd_mask.png"
+Python script started.
+Mask saved to uploads/6695a70ca61cd_mask.png
+Green percentage: 1.92%
+Python script finished. Green percentage: 1.92%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/6695a7b4d8746.jpg" "uploads/6695a7b4d8748_mask.png"
+Python script started.
+Mask saved to uploads/6695a7b4d8748_mask.png
+Green percentage: 2.87%
+Python script finished. Green percentage: 2.87%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/6695a9bd8d388.jpg" "uploads/6695a9bd8d38b_mask.png"
+Python script started.
+Mask saved to uploads/6695a9bd8d38b_mask.png
+Green percentage: 18.27%
+Python script finished. Green percentage: 18.27%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/669b91be5c954.jpg" "uploads/669b91be5c957_mask.png"
+Python script started.
+Mask saved to uploads/669b91be5c957_mask.png
+Green percentage: 31.15%
+Python script finished. Green percentage: 31.15%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/66bcd2aab2b7d.jpg" "uploads/66bcd2aab2b83_mask.png"
+Python script started.
+Mask saved to uploads/66bcd2aab2b83_mask.png
+Green percentage: 5.63%
+Python script finished. Green percentage: 5.63%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/66bcd2bef091d.jpg" "uploads/66bcd2bef0920_mask.png"
+Python script started.
+Mask saved to uploads/66bcd2bef0920_mask.png
+Green percentage: 1.92%
+Python script finished. Green percentage: 1.92%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/66bcd2cf7f3b1.jpg" "uploads/66bcd2cf7f3b3_mask.png"
+Python script started.
+Mask saved to uploads/66bcd2cf7f3b3_mask.png
+Green percentage: 3.58%
+Python script finished. Green percentage: 3.58%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/66bcd34a38462.jpg" "uploads/66bcd34a38464_mask.png"
+Python script started.
+Mask saved to uploads/66bcd34a38464_mask.png
+Green percentage: 3.58%
+Python script finished. Green percentage: 3.58%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/66bf5015065e3.jpg" "uploads/66bf5015065e6_mask.png"
+Python script started.
+Mask saved to uploads/66bf5015065e6_mask.png
+Green percentage: 3.58%
+Python script finished. Green percentage: 3.58%
+Output: 
+Return code: 0
+Command: "C:\Users\Saad Ali\AppData\Local\Programs\Python\Python312\python.exe" "green_coverage.py" "uploads/66c3bd9717c6a.jpg" "uploads/66c3bd9717c6f_mask.png"
+Python script started.
+Mask saved to uploads/66c3bd9717c6f_mask.png
+Green percentage: 3.58%
+Python script finished. Green percentage: 3.58%
+Output: 
+Return code: 0

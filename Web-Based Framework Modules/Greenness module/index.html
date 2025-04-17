@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenness</title>
+    <link rel="stylesheet" href="styles.css?v=1.0.5"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <div class="container" id="header">
+        <div class="row">
+            <div class="col" id="instructions">
+             
+            </div>
+            <div class="col">
+                <form id="upload-form" enctype="multipart/form-data" method="post">
+                    <input type="file" id="upload" name="image" accept="image/*" required>
+                    <button type="submit">Upload Image</button>
+                </form>
+                <button id="remove-image">Remove Image</button>
+                <button class="reset-button" id="reset-all">Reset All</button>
+                <div>
+                    <label for="mode-switch">Mode:</label>
+                    <select id="mode-switch">
+                        <option value="add">Add Green Squares</option>
+                        <option value="remove">Remove Green Squares</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="image-toggle-original">Show Original Image</label>
+                    <input type="radio" id="image-toggle-original" name="image-toggle" value="original" checked>
+                    <label for="image-toggle-mask">Show Mask Image</label>
+                    <input type="radio" id="image-toggle-mask" name="image-toggle" value="mask">
+                </div>
+                <div>
+                    <label for="grid-toggle">Show Grid</label>
+                    <input type="checkbox" id="grid-toggle" checked>
+                </div>
+                <div>
+                    <label for="green-toggle">Show Green Squares</label>
+                    <input type="checkbox" id="green-toggle" checked>
+                </div>
+                <div>
+                    <label for="diagonal-toggle">Show Diagonals</label>
+                    <input type="checkbox" id="diagonal-toggle">
+                </div>
+                <div>
+                    <label for="eraser-size">Select Size:</label>
+                    <select id="eraser-size">
+                        <option value="1">1 Square</option>
+                        <option value="2">4 Squares</option>
+                        <option value="4">16 Squares</option>
+                        <option value="8">64 Squares</option>
+                        <option value="16">256 Squares</option> <!-- New size option -->
+                    </select>
+                </div>
+                <div id="selected-count">
+                    <!-- <div class="green-info">Green from Python: <span id="python-green-value">0%</span></div> -->
+                    <div class="green-info">G%: <span id="js-green-value">0%</span></div>
+                    <div>Total squares in grid: <span id="total-squares">0</span></div>
+                    <div>Total green squares: <span id="total-green-squares">0</span></div>
+                </div>
+            </div>
+            <div class="col COL3">
+                <div>
+                    <p>Image Width: <span id="image-width">N/A</span></p>
+                    <p>Image Height: <span id="image-height">N/A</span></p>
+                    <!-- <p>Canvas Width: <span id="canvas-width">N/A</span></p>
+                    <p>Canvas Height: <span id="canvas-height">N/A</span></p> -->
+                </div>   
+                <!-- <div id="adj-result">
+                    10% ADJ. (AVG.VALUE) = <span id="result1"></span><hr>
+                    RANK SCORE = <span id="result2"></span> (<span id="result3"></span>)
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <div id="image-container">
+        <img id="uploaded-image" src="" alt="Upload an image" style="display:none;">
+        <img id="mask-image" src="" alt="Mask image" style="display:none;">
+        <canvas id="grid-canvas"></canvas>
+    </div>
+    <script>
+let greenCells = new Set(); // Global variable to store green cells
+let hoveredCells = new Set(); // Global variable to store hovered cells
+
+document.getElementById('upload-form').addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent the default form submission
+
+    const formData = new FormData(this);
+
+    fetch('upload.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            const uploadedImage = document.getElementById('uploaded-image');
+            const maskImage = document.getElementById('mask-image');
+
+            uploadedImage.src = data.upload_path;
+            maskImage.src = data.mask_path;
+
+            // Ensure images are displayed correctly
+            uploadedImage.style.display = 'block';
+            maskImage.style.display = 'none';
+
+            // Show the green percentage from the Python script
+            // document.getElementById('python-green-value').textContent = data.green_percentage.toFixed(2) + '%';
+
+            maskImage.onload = function() {
+                greenCells = highlightGreenAreas(uploadedImage, maskImage);
+                drawCurrentView();
+            };
+
+            // Ensure the radio button is selected correctly after image load
+            document.querySelector('input[name="image-toggle"]:checked').dispatchEvent(new Event('change'));
+        } else {
+            console.error(data.message);
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+});
+
+document.getElementById('grid-toggle').addEventListener('change', drawCurrentView);
+document.getElementById('green-toggle').addEventListener('change', drawCurrentView);
+document.getElementById('diagonal-toggle').addEventListener('change', drawCurrentView);
+document.querySelectorAll('input[name="image-toggle"]').forEach(radio => {
+    radio.addEventListener('change', drawCurrentView);
+});
+
+function drawGridAndHighlights(image, totalSquares) {
+    const canvas = document.getElementById('grid-canvas');
+    const ctx = canvas.getContext('2d');
+
+    // Use naturalWidth and naturalHeight to ensure we get the actual image size
+    const width = image.naturalWidth;
+    const height = image.naturalHeight;
+    canvas.width = width;
+    canvas.height = height;
+
+    // Update HTML elements with the values
+    document.getElementById('image-width').textContent = width;
+    document.getElementById('image-height').textContent = height;
+    // document.getElementById('canvas-width').textContent = canvas.width;
+    // document.getElementById('canvas-height').textContent = canvas.height;
+
+    // Calculate dimensions based on the image size and desired grid size (1% of width and height)
+    const cellWidth = width * 0.01;
+    const cellHeight = height * 0.01;
+
+    const numCols = Math.ceil(width / cellWidth);
+    const numRows = Math.ceil(height / cellHeight);
+
+    const correctedTotalSquares = numCols * numRows;
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Draw the grid if the grid toggle is checked
+    if (document.getElementById('grid-toggle').checked) {
+        for (let x = 0; x < width; x += cellWidth) {
+            for (let y = 0; y < height; y += cellHeight) {
+                ctx.strokeStyle = 'rgba(0, 0, 0, 0.5)';
+                ctx.strokeRect(x, y, cellWidth, cellHeight);
+            }
+        }
+    }
+
+    // Draw green cells if the green toggle is checked
+    if (document.getElementById('green-toggle').checked) {
+        // Redraw the green cells based on stored positions
+        greenCells.forEach(cellKey => {
+            const [col, row] = cellKey.split('-').map(Number);
+            const startX = col * cellWidth;
+            const startY = row * cellHeight;
+            ctx.fillStyle = 'rgba(0, 255, 0, 0.5)';
+            ctx.fillRect(startX, startY, cellWidth, cellHeight);
+        });
+    }
+
+    // Draw hovered cells
+    hoveredCells.forEach(cellKey => {
+        const [col, row] = cellKey.split('-').map(Number);
+        const startX = col * cellWidth;
+        const startY = row * cellHeight;
+        ctx.fillStyle = 'rgba(255, 255, 0, 0.5)';
+        ctx.fillRect(startX, startY, cellWidth, cellHeight);
+    });
+
+    // Draw diagonals if the diagonal toggle is checked
+    if (document.getElementById('diagonal-toggle').checked) {
+        ctx.strokeStyle = 'rgba(255, 0, 0, 0.75)';
+        ctx.lineWidth = 2;
+
+        ctx.beginPath();
+        ctx.moveTo(0, 0);
+        ctx.lineTo(canvas.width, canvas.height);
+        ctx.moveTo(canvas.width, 0);
+        ctx.lineTo(0, canvas.height);
+        ctx.stroke();
+    }
+
+    document.getElementById('total-squares').textContent = correctedTotalSquares;
+    document.getElementById('total-green-squares').textContent = greenCells.size;
+    // Update green percentage from JS
+    const greenPercentage = (greenCells.size / correctedTotalSquares) * 100;
+    document.getElementById('js-green-value').textContent = greenPercentage.toFixed(2) + '%';
+}
+
+function highlightGreenAreas(image, maskImage) {
+    const maskCanvas = document.createElement('canvas');
+    const maskCtx = maskCanvas.getContext('2d');
+    maskCanvas.width = maskImage.naturalWidth;
+    maskCanvas.height = maskImage.naturalHeight;
+    maskCtx.drawImage(maskImage, 0, 0);
+
+    const maskData = maskCtx.getImageData(0, 0, maskCanvas.width, maskCanvas.height);
+    const width = maskImage.naturalWidth;
+    const height = maskImage.naturalHeight;
+    const cellWidth = width * 0.01;
+    const cellHeight = height * 0.01;
+
+    const newGreenCells = new Set();
+
+    for (let col = 0; col < Math.ceil(width / cellWidth); col++) {
+        for (let row = 0; row < Math.ceil(height / cellHeight); row++) {
+            const startX = col * cellWidth;
+            const startY = row * cellHeight;
+            let greenPixelCount = 0;
+            const cellPixelCount = cellWidth * cellHeight;
+
+            for (let x = startX; x < startX + cellWidth; x++) {
+                for (let y = startY; y < startY + cellHeight; y++) {
+                    const idx = (Math.floor(y) * maskCanvas.width + Math.floor(x)) * 4;
+                    if (maskData.data[idx] > 0) {
+                        greenPixelCount++;
+                    }
+                }
+            }
+
+            if (greenPixelCount / cellPixelCount >= 0.5) {
+                newGreenCells.add(`${col}-${row}`);
+            }
+        }
+    }
+
+    const totalSquares = Math.ceil(width / cellWidth) * Math.ceil(height / cellHeight);
+
+    greenCells = newGreenCells; // Update the global greenCells set
+
+    drawGridAndHighlights(image, totalSquares);
+
+    // Redraw grid on window resize
+    window.addEventListener('resize', () => drawGridAndHighlights(image, totalSquares));
+
+    // Make grid interactive
+    const canvas = document.getElementById('grid-canvas');
+    
+    canvas.addEventListener('mousemove', function(event) {
+        const rect = canvas.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+        const col = Math.floor(x / (canvas.width * 0.01));
+        const row = Math.floor(y / (canvas.height * 0.01));
+        const eraserSize = parseInt(document.getElementById('eraser-size').value);
+
+        hoveredCells.clear();
+        for (let i = 0; i < eraserSize; i++) {
+            for (let j = 0; j < eraserSize; j++) {
+                const hoverKey = `${col + i}-${row + j}`;
+                hoveredCells.add(hoverKey);
+            }
+        }
+        drawCurrentView();
+    });
+
+    canvas.addEventListener('mouseout', function() {
+        hoveredCells.clear();
+        drawCurrentView();
+    });
+
+    canvas.addEventListener('click', function(event) {
+        const rect = canvas.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+        const col = Math.floor(x / (canvas.width * 0.01));
+        const row = Math.floor(y / (canvas.height * 0.01));
+        const mode = document.getElementById('mode-switch').value;
+        const eraserSize = parseInt(document.getElementById('eraser-size').value);
+
+        for (let i = 0; i < eraserSize; i++) {
+            for (let j = 0; j < eraserSize; j++) {
+                const cellKey = `${col + i}-${row + j}`;
+                if (mode === 'add') {
+                    greenCells.add(cellKey);
+                } else if (mode === 'remove') {
+                    greenCells.delete(cellKey);
+                }
+            }
+        }
+
+        drawGridAndHighlights(image, totalSquares);
+
+        // Update green percentage and total green squares
+        const newGreenPercentage = (greenCells.size / totalSquares) * 100;
+        document.getElementById('js-green-value').textContent = newGreenPercentage.toFixed(2) + '%';
+        document.getElementById('total-green-squares').textContent = greenCells.size;
+    });
+
+    // Add reset functionality
+    document.getElementById('reset-all').addEventListener('click', function() {
+        greenCells.clear();
+        drawGridAndHighlights(image, totalSquares);
+        document.getElementById('js-green-value').textContent = '0%';
+        document.getElementById('total-green-squares').textContent = '0';
+    });
+
+    // Add functionality to switch between original and mask images
+    document.querySelectorAll('input[name="image-toggle"]').forEach(radio => {
+        radio.addEventListener('change', function() {
+            const originalImage = document.getElementById('uploaded-image');
+            const maskImage = document.getElementById('mask-image');
+            if (this.value === 'original') {
+                originalImage.style.display = 'block';
+                maskImage.style.display = 'none';
+            } else if (this.value === 'mask') {
+                originalImage.style.display = 'none';
+                maskImage.style.display = 'block';
+            }
+            drawCurrentView();
+        });
+    });
+
+    return newGreenCells; // Return the set of green cells
+}
+
+function drawCurrentView() {
+    const img = document.querySelector('input[name="image-toggle"]:checked').value === 'original' ? document.getElementById('uploaded-image') : document.getElementById('mask-image');
+    const totalSquares = Math.ceil(img.naturalWidth * 0.01) * Math.ceil(img.naturalHeight * 0.01); // Adjust based on your grid calculation logic
+
+    drawGridAndHighlights(img, totalSquares);
+}
+    </script>
+</body>
+</html>
